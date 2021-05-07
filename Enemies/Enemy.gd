@@ -3,7 +3,9 @@ class_name Enemy
 
 
 # Declare member variables here. Examples:
-export(int) var speed = 300.0
+export(int) var base_speed = 300.0
+
+var speed_modifier := 1.0
 
 export(NodePath) var path
 
@@ -16,4 +18,5 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	get_node("Path/PathFollower").offset += speed * delta
+	var speed = base_speed * speed_modifier
+	get_node("Path/MovingPoint").offset += speed * delta

@@ -27,6 +27,7 @@ config/icon="res://icon.png"
 [layer_names]
 
 2d_physics/layer_1="Enemies"
+2d_physics/layer_2="Towers"
 
 [physics]
 
