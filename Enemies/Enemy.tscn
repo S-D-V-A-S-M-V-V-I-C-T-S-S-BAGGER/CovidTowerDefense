@@ -18,11 +18,14 @@ script = ExtResource( 1 )
 curve = SubResource( 2 )
 
 [node name="PathFollower" type="PathFollow2D" parent="Path"]
+rotate = false
+loop = false
 
 [node name="Sprite" type="Sprite" parent="Path/PathFollower"]
 texture = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="Path/PathFollower"]
+collision_mask = 0
 
 [node name="Collision" type="CollisionShape2D" parent="Path/PathFollower/Area2D"]
 shape = SubResource( 1 )
