@@ -17,10 +17,3 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	get_node("Path/PathFollower").offset += speed * delta
-	
-	# Start and stop animation
-#	if previous_frame_pos.distance_squared_to(current_frame_pos) >= 0.01:
-#	get_noce("Path/PathFollower/AnimatedSprite").start()
-#	else:
-#		_animated_sprite.stop()
-	
