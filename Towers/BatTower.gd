@@ -51,6 +51,4 @@ func _on_Bat_area_entered(area: Area2D) -> void:
 		set_bat_animation()
 		
 		var enemy = get_node(area.get_path()).get_parent().get_parent().get_parent()
-		var enemy_speed_modifer = enemy.get("speed_modifier")
-		enemy_speed_modifer *= 0.5
-		enemy.set("speed_modifier", enemy_speed_modifer)
+		enemy.set("health", 0)
