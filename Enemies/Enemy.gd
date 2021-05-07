@@ -29,5 +29,5 @@ func _process(delta: float) -> void:
 
 func die():
 	$Path/MovingPoint/Area2D/Collision.disabled = true
-	$Path/MovingPoint/AnimatedSprite.stop()
+	$Path/MovingPoint/AnimatedSprite.play("death")
 	dead = true
