@@ -22,6 +22,7 @@ func _process(delta: float) -> void:
 	# TODO make this call actual handlers
 	if !dead and health > 0:
 		var speed = base_speed * speed_modifier
+		$Path/MovingPoint/AnimatedSprite.speed_scale = speed_modifier
 		get_node("Path/MovingPoint").offset += speed * delta
 	else:
 		die()
@@ -29,5 +30,6 @@ func _process(delta: float) -> void:
 
 func die():
 	$Path/MovingPoint/Area2D/Collision.disabled = true
+	$Path/MovingPoint/AnimatedSprite.speed_scale = 1.0
 	$Path/MovingPoint/AnimatedSprite.play("death")
 	dead = true

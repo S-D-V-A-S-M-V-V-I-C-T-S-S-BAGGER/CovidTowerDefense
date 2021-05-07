@@ -20,7 +20,7 @@ animations = [ {
 "frames": [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 6 ) ],
 "loop": false,
 "name": "death",
-"speed": 5.0
+"speed": 3.0
 } ]
 
 [node name="Enemy" type="Node2D"]
@@ -41,3 +41,4 @@ shape = SubResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Path/MovingPoint"]
 frames = SubResource( 4 )
+playing = true
