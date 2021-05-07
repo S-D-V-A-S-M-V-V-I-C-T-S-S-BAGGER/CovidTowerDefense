@@ -1,22 +1,17 @@
-extends KinematicBody2D
+extends Node2D
 class_name Enemy
 
 
 # Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+export(int) var speed = 300.0
+
+var velocity := Vector2.ZERO
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
+func _ready() -> void:
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
 func _process(delta: float) -> void:
-	var velocity := Vector2(300, 0)
-	
-	move_and_slide(velocity)
+	get_node("Path/PathFollower").offset += speed * delta
