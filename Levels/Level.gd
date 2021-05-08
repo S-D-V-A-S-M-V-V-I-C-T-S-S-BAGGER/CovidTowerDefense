@@ -38,3 +38,7 @@ func calculate_score() -> int:
 func show_end_screen() -> void:
 	$CanvasLayer/EndScreen.visible = true
 	$CanvasLayer/EndScreen/CenterContainer/VBoxContainer/HBoxContainer/FinalScoreValueLabel.text = str(calculate_score())
+
+
+func _on_MenuButton_pressed() -> void:
+	get_tree().change_scene("res://Menus/MainMenu/MainMenu.tscn")
