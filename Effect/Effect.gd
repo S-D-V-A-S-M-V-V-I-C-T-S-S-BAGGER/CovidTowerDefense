@@ -55,3 +55,9 @@ func on_add():
 
 func on_expire():
 	pass
+
+func on_damage(amount: float) -> float:
+	return amount
+
+func on_effect(effect: Effect) -> bool:
+	return true

@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Effect",
+"class": "CoronaEffect",
+"language": "GDScript",
+"path": "res://Effect/CoronaEffect.gd"
+}, {
 "base": "Node",
 "class": "Effect",
 "language": "GDScript",
@@ -20,6 +25,11 @@ _global_script_classes=[ {
 "path": "res://Enemies/Enemy.gd"
 }, {
 "base": "Effect",
+"class": "ShieldEffect",
+"language": "GDScript",
+"path": "res://Effect/ShieldEffect.gd"
+}, {
+"base": "Effect",
 "class": "SlowEffect",
 "language": "GDScript",
 "path": "res://Effect/SlowEffect.gd"
@@ -28,12 +38,20 @@ _global_script_classes=[ {
 "class": "Wave",
 "language": "GDScript",
 "path": "res://Levels/Waves/Wave.gd"
+}, {
+"base": "Effect",
+"class": "WeaknessEffect",
+"language": "GDScript",
+"path": "res://Effect/WeaknessEffect.gd"
 } ]
 _global_script_class_icons={
+"CoronaEffect": "",
 "Effect": "",
 "Enemy": "",
+"ShieldEffect": "",
 "SlowEffect": "",
-"Wave": ""
+"Wave": "",
+"WeaknessEffect": ""
 }
 
 [application]

@@ -3,6 +3,7 @@ class_name Enemy
 
 
 enum State { CREATED, SPAWNED, ALIVE, DEAD }
+enum Upgrades {}
 
 export(NodePath) var path
 
@@ -15,11 +16,12 @@ export(int) var base_health = 100
 export(int) var base_immunity = 0.5
 export(int) var base_speed = 300.0
 
-var immunity: float
-var health: int
+var immunity = 1.0
+var health: float
 var speed = 1.0
 
 var effects = []
+var shield = null
 var state = State.CREATED
 
 
@@ -27,7 +29,9 @@ var state = State.CREATED
 func _ready() -> void:
 	if path:
 		get_node("Path").curve = get_node(path).curve
-		
+	
+	health = base_health
+	
 	on_spawn()
 	state = State.SPAWNED
 
@@ -42,6 +46,7 @@ func _process(delta: float) -> void:
 		return
 	
 	# Then initialize the base case
+	immunity = 1.0
 	speed = 1.0
 	
 	# Process all effects
@@ -58,16 +63,20 @@ func _process(delta: float) -> void:
 	# Then remove all expired effects
 	for effect in expired:
 		effects.erase(effect)
+		
+		# Also delete the shield
+		if effect == shield:
+			shield = null
 	
 	# Check if the entity is still alive
-	if health <= 0:
+	if health <= 0.0:
 		die()
 		return
 	
 	# Otherwise, continue
 	var cur_speed = base_speed * speed;
-	$Path/MovingPoint/AnimatedSprite.speed_scale = speed
-	get_node("Path/MovingPoint").offset += speed * delta
+	$Path/MovingPoint/AnimatedSprite.speed_scale = cur_speed
+	get_node("Path/MovingPoint").offset += cur_speed * delta
 
 
 func die():
@@ -82,9 +91,10 @@ func die():
 	state = State.DEAD
 
 
-func damage(amount: int):
+func damage(amount: float):
+	amount = on_damage(amount)
 	health -= amount
-	if health <= 0:
+	if health <= 0.0:
 		die()
 
 
@@ -103,8 +113,26 @@ func heal(amount: int):
 
 func add_effect(effect):
 	if not on_effect(effect):
-		effects.append(effect)
+		return
+	
+	# Save a reference to the shield effect for later use
+	if effect.get_class() == "ShieldEffect":
+		shield = effect
+	
+	effects.append(effect)
 
+
+func get_health() -> float:
+	return health
+
+
+func get_shield() -> float:
+	return shield.shield if shield != null else 0.0
+
+
+func get_max_health() -> float:
+	var cur_health = get_health() + get_shield()
+	return base_health if cur_health < base_health else cur_health
 
 
 # ##
@@ -121,10 +149,18 @@ func on_die():
 	pass
 
 # Process damage, opportunity to increase / decrease the amount
-func on_damaged(amount: int) -> int:
+func on_damage(amount: float) -> float:
+	# Give effects a chance to modify damage
+	for effect in effects:
+		amount = effect.on_damage(amount)
+	
 	return amount
 
 # Process the applied effect, opportunity to cancel the effect
 func on_effect(effect) -> bool:
+	# Give effects a chance to cancel other effects
+	for e in effects:
+		if not e.on_effect(effect):
+			return false
+	
 	return true
-
