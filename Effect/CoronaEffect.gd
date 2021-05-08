@@ -20,7 +20,7 @@ func on_damage(amount: float) -> float:
 	var spread = randf() < self.infectious
 	if spread:
 		# TODO: Implement spreading corona
-		push_warning("Corona spread effect not implemented yet (see CoronaEffect.gd:22)")
+		push_warning("Corona spread effect not implemented yet (see CoronaEffect.gd:23)")
 	
 	return amount
 

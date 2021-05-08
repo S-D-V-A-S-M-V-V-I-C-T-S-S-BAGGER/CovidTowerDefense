@@ -56,4 +56,4 @@ func _on_Bat_area_entered(area: Area2D) -> void:
 		set_bat_animation()
 		
 		var enemy = get_node(area.get_path()).get_parent().get_parent().get_parent()
-		enemy.health -= 50
+		enemy.damage(50)

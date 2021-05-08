@@ -3,7 +3,6 @@ class_name Enemy
 
 
 enum State { CREATED, SPAWNED, ALIVE, DEAD }
-enum Upgrades {}
 
 export(NodePath) var path
 
@@ -75,8 +74,15 @@ func _process(delta: float) -> void:
 	
 	# Otherwise, continue
 	var cur_speed = base_speed * speed;
-	$Path/MovingPoint/AnimatedSprite.speed_scale = cur_speed
-	get_node("Path/MovingPoint").offset += cur_speed * delta
+	var movement: PathFollow2D = get_node("Path/MovingPoint")
+	movement.offset += cur_speed * delta
+	
+	if movement.unit_offset >= 1.0:
+		pass
+	
+	
+	# Update animation speed
+	$Path/MovingPoint/AnimatedSprite.speed_scale = speed
 
 
 func die():
@@ -89,6 +95,15 @@ func die():
 	$Path/MovingPoint/AnimatedSprite.play("death")
 	on_die()
 	state = State.DEAD
+
+
+func finish():
+	on_finish()
+	state == State.FINISHED
+	
+	# Prepare for deletion
+	$Path/MovingPoint/Area2D/Collision.disabled = true
+	
 
 
 func damage(amount: float):
@@ -146,6 +161,10 @@ func on_spawn():
 
 # Maybe do something when this unit dies?
 func on_die():
+	pass
+
+# Handle this entity finishing the course
+func on_finish():
 	pass
 
 # Process damage, opportunity to increase / decrease the amount
