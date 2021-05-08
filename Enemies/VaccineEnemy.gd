@@ -1,10 +1,9 @@
 extends Enemy
-class_name HealingEnemy
+class_name VaccineEnemy
 
 
-export(float) var heal = 10.0
-export(float) var heal_interval = 0.5
-export(int) var heal_units = 4
+export(float) var vaccine_interval = 0.5
+export(int) var vaccine_units = 4
 
 var in_range : Array = []
 var last_cast = 0.0
@@ -17,13 +16,13 @@ func _process(delta: float) -> void:
 		return
 	
 	last_cast += delta
-	while delta >= heal_interval:
-		delta -= heal_interval
-		do_heal()
+	while delta >= vaccine_interval:
+		delta -= vaccine_interval
+		do_vaccinate()
 
 
-func do_heal():
-	var amount = randi() % (heal_units) + heal_units - heal_units / 2
+func do_vaccinate():
+	var amount = randi() % (vaccine_units) + vaccine_units - vaccine_units / 2
 	for i in amount:
 		var enemy = in_range[randi() % in_range.size()]
 		enemy.heal(heal)
