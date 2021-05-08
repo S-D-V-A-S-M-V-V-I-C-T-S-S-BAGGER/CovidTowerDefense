@@ -12,6 +12,11 @@ export var bat_count := 1
 export var bat_timer := 0.0
 
 
+func initialize(tower_position, path_position):
+	position = tower_position
+	$Bat.position = path_position
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	set_bat_animation()

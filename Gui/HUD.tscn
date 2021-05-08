@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Gui/TowerOptions.gd" type="Script" id=1]
+[ext_resource path="res://Gui/TowerPositions.gd" type="Script" id=2]
+[ext_resource path="res://Towers/Tower.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Towers/BatTower.tscn" type="PackedScene" id=4]
+
+[node name="HUD" type="Node2D"]
+
+[node name="TowerPositions" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TowerOptions" type="Panel" parent="."]
+margin_right = 64.0
+margin_bottom = 128.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+bat_tower = ExtResource( 4 )
+slow_tower = ExtResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TowerOptions"]
+margin_right = 62.0
+margin_bottom = 44.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BatTower" type="Button" parent="TowerOptions/VBoxContainer"]
+margin_right = 62.0
+margin_bottom = 20.0
+text = "Bat"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SlowTower" type="Button" parent="TowerOptions/VBoxContainer"]
+margin_top = 24.0
+margin_right = 62.0
+margin_bottom = 44.0
+text = "Slow"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="TowerOptions/VBoxContainer/BatTower" to="TowerOptions" method="_on_BatTower_pressed"]
+[connection signal="pressed" from="TowerOptions/VBoxContainer/SlowTower" to="TowerOptions" method="_on_SlowTower_pressed"]

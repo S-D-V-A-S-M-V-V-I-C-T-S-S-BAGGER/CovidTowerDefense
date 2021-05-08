@@ -16,6 +16,10 @@ func _process(delta: float) -> void:
 	pass
 
 
+func initialize(tower_position, path_position):
+	position = tower_position
+
+
 func _on_Collision_area_shape_entered(area_id: int, area: Area2D, area_shape: int, local_shape: int) -> void:
 	get_node(area.get_path()).get_parent().get_parent().get_parent().set("speed_modifier", 0.5)
 	
