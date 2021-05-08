@@ -31,9 +31,10 @@ func get_living_enemy_count() -> int:
 
 
 func calculate_score() -> int:
-	var score = enemies_spawned * 5 - enemies_arrived * 20
+	var score = enemies_killed * 5 - enemies_arrived * 20
 	return score
 
 
 func show_end_screen() -> void:
-	$EndScreen.visible = true
+	$CanvasLayer/EndScreen.visible = true
+	$CanvasLayer/EndScreen/CenterContainer/VBoxContainer/HBoxContainer/FinalScoreValueLabel.text = str(calculate_score())

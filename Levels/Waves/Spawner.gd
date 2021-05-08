@@ -48,7 +48,7 @@ func load_wave():
 
 
 func done():
-	pass
+	level.spawner_done = true
 
 
 func spawn():
