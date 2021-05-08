@@ -11,6 +11,10 @@ func _init(enemy: Enemy, duration: float, damage: float, infectious: float).(ene
 	self.infectious = infectious
 
 
+func name() -> String:
+	return "CoronaEffect"
+
+
 func tick(delta: float):
 	enemy.immunity *= 0.5
 	enemy.damage(damage * delta)
@@ -26,12 +30,8 @@ func on_damage(amount: float) -> float:
 
 
 func on_effect(effect: Effect) -> bool:
-	if effect.get_class() != "CoronaEffect":
+	if effect.name() != "CoronaEffect":
 		return true
-	
-	# Don't apply corona to immune persons
-	if randf() > enemy.immunity:
-		return false
 	
 	# Calculate the balance between the two corona effects. RNG will prefer
 	# selection of the better one

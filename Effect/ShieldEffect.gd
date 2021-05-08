@@ -11,6 +11,10 @@ func _init(enemy: Enemy, shield: float).(enemy, -1) -> void:
 	self.initial = shield
 
 
+func name() -> String:
+	return "ShieldEffect"
+
+
 func on_damage(amount: float) -> float:
 	# If the shield is not big enough, then decrease the damage and remove the
 	# shield
@@ -24,7 +28,7 @@ func on_damage(amount: float) -> float:
 
 
 func on_effect(effect: Effect) -> bool:
-	if effect.get_class() != "ShieldEffect":
+	if effect.name() != "ShieldEffect":
 		return true
 	
 	shield += effect.shield
