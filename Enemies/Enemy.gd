@@ -146,7 +146,10 @@ func add_effect(effect):
 	if effect.get_class() == "ShieldEffect":
 		shield = effect
 	
-	effects.append(effect)
+	if effect.is_priority():
+		effects.insert(0, effect)
+	else:
+		effects.append(effect)
 
 
 func get_health() -> float:
@@ -160,6 +163,14 @@ func get_shield() -> float:
 func get_max_health() -> float:
 	var cur_health = get_health() + get_shield()
 	return base_health if cur_health < base_health else cur_health
+
+
+func is_infected() -> bool:
+	for e in effects:
+		if e.get_class() == "CoronaEffect":
+			return true
+	
+	return false
 
 
 # ##

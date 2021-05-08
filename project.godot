@@ -44,6 +44,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Effect/SlowEffect.gd"
 }, {
+"base": "Effect",
+"class": "VaccineEffect",
+"language": "GDScript",
+"path": "res://Effect/VaccineEffect.gd"
+}, {
+"base": "Enemy",
+"class": "VaccineEnemy",
+"language": "GDScript",
+"path": "res://Enemies/VaccineEnemy.gd"
+}, {
 "base": "Node",
 "class": "Wave",
 "language": "GDScript",
@@ -62,6 +72,8 @@ _global_script_class_icons={
 "Level": "",
 "ShieldEffect": "",
 "SlowEffect": "",
+"VaccineEffect": "",
+"VaccineEnemy": "",
 "Wave": "",
 "WeaknessEffect": ""
 }
@@ -76,6 +88,7 @@ config/icon="res://icon.png"
 
 2d_physics/layer_1="Enemies"
 2d_physics/layer_2="Towers"
+2d_physics/layer_3="Healing"
 
 [physics]
 

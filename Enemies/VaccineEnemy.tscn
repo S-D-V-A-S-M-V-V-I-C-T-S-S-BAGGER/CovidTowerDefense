@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Enemies/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Enemies/VaccineEnemy.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/schaap/schaap_1.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/schaap/schaap_2.png" type="Texture" id=3]
 [ext_resource path="res://PlaceHolders/schaap_death_1.png" type="Texture" id=4]
@@ -10,7 +10,10 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="CircleShape2D" id=2]
+radius = 64.0
+
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
@@ -23,7 +26,7 @@ animations = [ {
 "speed": 3.0
 } ]
 
-[node name="Enemy" type="Node2D"]
+[node name="VaccineEnemy" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="Path" type="Path2D" parent="."]
@@ -33,13 +36,24 @@ curve = null
 rotate = false
 loop = false
 
-[node name="Area2D" type="Area2D" parent="Path/MovingPoint"]
+[node name="Collision" type="Area2D" parent="Path/MovingPoint"]
 collision_mask = 0
 
-[node name="Collision" type="CollisionShape2D" parent="Path/MovingPoint/Area2D"]
+[node name="CollisionShape" type="CollisionShape2D" parent="Path/MovingPoint/Collision"]
+self_modulate = Color( 1, 0, 0, 1 )
 shape = SubResource( 1 )
+
+[node name="Healing" type="Area2D" parent="Path/MovingPoint"]
+collision_layer = 4
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Path/MovingPoint/Healing"]
+self_modulate = Color( 0.360784, 1, 0, 1 )
+shape = SubResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Path/MovingPoint"]
 position = Vector2( 0.0853119, -0.0853195 )
-frames = SubResource( 2 )
+frames = SubResource( 3 )
 playing = true
+
+[connection signal="area_entered" from="Path/MovingPoint/Healing" to="." method="_on_Healing_area_entered"]
+[connection signal="area_exited" from="Path/MovingPoint/Healing" to="." method="_on_Healing_area_exited"]

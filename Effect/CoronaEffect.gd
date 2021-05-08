@@ -29,11 +29,17 @@ func on_effect(effect: Effect) -> bool:
 	if effect.get_class() != "CoronaEffect":
 		return true
 	
+	# Don't apply corona to immune persons
+	if randf() > enemy.immunity:
+		return false
+	
 	# Calculate the balance between the two corona effects. RNG will prefer
 	# selection of the better one
 	var balance = (effect.damage / self.damage) * (effect.infectious / self.infectious)
 	var replace = 2 * randf() < balance
 	if not replace:
+		active = 0.0
+		duration = effect.duration
 		return false
 	
 	# Then apply the new corona effect and set this one to expired

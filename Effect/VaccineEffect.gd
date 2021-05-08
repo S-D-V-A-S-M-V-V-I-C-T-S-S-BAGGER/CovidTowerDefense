@@ -1,0 +1,17 @@
+extends Effect
+class_name VaccineEffect
+
+
+func _init(enemy: Enemy).(enemy, -1) -> void:
+	pass
+
+
+func tick(delta: float):
+	enemy.immunity = 1.0
+
+
+func on_effect(effect: Effect) -> bool:
+	return effect.get_class() != "CoronaEffect"
+
+func is_priority() -> bool:
+	return true

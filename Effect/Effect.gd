@@ -61,3 +61,6 @@ func on_damage(amount: float) -> float:
 
 func on_effect(effect: Effect) -> bool:
 	return true
+
+func is_priority() -> bool:
+	return false
