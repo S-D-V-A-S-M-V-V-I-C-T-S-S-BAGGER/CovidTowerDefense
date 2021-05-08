@@ -6,7 +6,7 @@ var initial: float
 var shield: float
 
 
-func _init(enemy: Enemy, duration: float, shield: float).(enemy, duration) -> void:
+func _init(enemy: Enemy, shield: float).(enemy, -1) -> void:
 	self.shield = shield
 	self.initial = shield
 
