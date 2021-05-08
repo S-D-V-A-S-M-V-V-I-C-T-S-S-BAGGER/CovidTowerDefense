@@ -7,10 +7,10 @@
 [ext_resource path="res://PlaceHolders/schaap_death_0.png" type="Texture" id=5]
 [ext_resource path="res://PlaceHolders/schaap_death_2.png" type="Texture" id=6]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
@@ -37,8 +37,10 @@ loop = false
 collision_mask = 0
 
 [node name="Collision" type="CollisionShape2D" parent="Path/MovingPoint/Area2D"]
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Path/MovingPoint"]
-frames = SubResource( 4 )
+position = Vector2( 0.0853119, -0.0853195 )
+frames = SubResource( 2 )
+frame = 1
 playing = true

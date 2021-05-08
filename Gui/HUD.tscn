@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Gui/TowerOptions.gd" type="Script" id=1]
 [ext_resource path="res://Gui/TowerPositions.gd" type="Script" id=2]
 [ext_resource path="res://Towers/Tower.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Towers/BatTower.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Towers/CellTower.tscn" type="PackedScene" id=5]
 
 [node name="HUD" type="Node2D"]
 
@@ -24,6 +25,7 @@ __meta__ = {
 }
 bat_tower = ExtResource( 4 )
 slow_tower = ExtResource( 3 )
+cell_tower = ExtResource( 5 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TowerOptions"]
 margin_right = 62.0
@@ -49,5 +51,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="CellTower" type="Button" parent="TowerOptions/VBoxContainer"]
+margin_top = 48.0
+margin_right = 62.0
+margin_bottom = 68.0
+text = "5G"
+
 [connection signal="pressed" from="TowerOptions/VBoxContainer/BatTower" to="TowerOptions" method="_on_BatTower_pressed"]
 [connection signal="pressed" from="TowerOptions/VBoxContainer/SlowTower" to="TowerOptions" method="_on_SlowTower_pressed"]
+[connection signal="pressed" from="TowerOptions/VBoxContainer/CellTower" to="TowerOptions" method="_on_CellTower_pressed"]

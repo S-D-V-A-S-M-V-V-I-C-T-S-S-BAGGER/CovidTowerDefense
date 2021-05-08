@@ -6,6 +6,7 @@ extends Panel
 # var b = "text"
 export (PackedScene) var bat_tower
 export (PackedScene) var slow_tower
+export (PackedScene) var cell_tower
 
 
 # Called when the node enters the scene tree for the first time.
@@ -34,3 +35,7 @@ func _on_BatTower_pressed():
 
 func _on_SlowTower_pressed():
 	place_tower(slow_tower)
+
+
+func _on_CellTower_pressed():
+	place_tower(cell_tower)
