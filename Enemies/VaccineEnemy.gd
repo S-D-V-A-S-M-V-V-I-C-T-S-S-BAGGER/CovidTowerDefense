@@ -25,7 +25,7 @@ func do_vaccinate():
 	var amount = randi() % (vaccine_units) + vaccine_units - vaccine_units / 2
 	for i in amount:
 		var enemy = in_range[randi() % in_range.size()]
-		enemy.heal(heal)
+		enemy.add_effect(VaccineEffect.new(enemy))
 
 
 func _on_Healing_area_entered(area: Area2D) -> void:
