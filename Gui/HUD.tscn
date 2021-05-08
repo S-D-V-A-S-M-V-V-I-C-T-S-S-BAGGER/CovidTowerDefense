@@ -11,11 +11,13 @@
 [ext_resource path="res://Towers/FastfoodTower.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Sounds/cough-files/cough1.mp3" type="AudioStream" id=10]
 [ext_resource path="res://Gui/AudioStreamPlayer.gd" type="Script" id=11]
+[ext_resource path="res://Gui/HUD.gd" type="Script" id=11]
 
 [node name="HUD" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/margin_right = 896
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -67,8 +69,86 @@ margin_right = 59.0
 margin_bottom = 14.0
 text = "0"
 
-[node name="TowerOptions" type="VBoxContainer" parent="SideBar"]
+[node name="SpawnTimer" type="MarginContainer" parent="SideBar"]
 margin_top = 38.0
+margin_right = 128.0
+margin_bottom = 72.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="HBox" type="HBoxContainer" parent="SideBar/SpawnTimer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 118.0
+margin_bottom = 24.0
+
+[node name="SpawnLabel" type="Label" parent="SideBar/SpawnTimer/HBox"]
+margin_right = 44.0
+margin_bottom = 14.0
+text = "Spawn:"
+
+[node name="TimerLabel" type="Label" parent="SideBar/SpawnTimer/HBox"]
+margin_left = 48.0
+margin_right = 68.0
+margin_bottom = 14.0
+text = "0.0"
+
+[node name="EnemyCounter" type="MarginContainer" parent="SideBar"]
+margin_top = 76.0
+margin_right = 128.0
+margin_bottom = 110.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="HBox" type="HBoxContainer" parent="SideBar/EnemyCounter"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 118.0
+margin_bottom = 24.0
+
+[node name="EnemyCounterLabel" type="Label" parent="SideBar/EnemyCounter/HBox"]
+margin_right = 59.0
+margin_bottom = 14.0
+text = "Enemies:"
+
+[node name="EnemyCounterValueLabel" type="Label" parent="SideBar/EnemyCounter/HBox"]
+margin_left = 63.0
+margin_right = 71.0
+margin_bottom = 14.0
+text = "0"
+
+[node name="Score" type="MarginContainer" parent="SideBar"]
+margin_top = 114.0
+margin_right = 128.0
+margin_bottom = 148.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="HBox" type="HBoxContainer" parent="SideBar/Score"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 118.0
+margin_bottom = 24.0
+
+[node name="ScoreLabel" type="Label" parent="SideBar/Score/HBox"]
+margin_right = 39.0
+margin_bottom = 14.0
+text = "Score:"
+
+[node name="ScoreValueLabel" type="Label" parent="SideBar/Score/HBox"]
+margin_left = 43.0
+margin_right = 51.0
+margin_bottom = 14.0
+text = "0"
+
+[node name="TowerOptions" type="VBoxContainer" parent="SideBar"]
+margin_top = 152.0
 margin_right = 128.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
@@ -86,45 +166,45 @@ lidl_tower = ExtResource( 7 )
 nerts_tower = ExtResource( 8 )
 
 [node name="BatTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 211.0
+margin_top = 154.0
 margin_right = 128.0
-margin_bottom = 231.0
+margin_bottom = 174.0
 text = "Bat"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="SlowTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 235.0
+margin_top = 178.0
 margin_right = 128.0
-margin_bottom = 255.0
+margin_bottom = 198.0
 text = "Slow"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CellTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 259.0
+margin_top = 202.0
 margin_right = 128.0
-margin_bottom = 279.0
+margin_bottom = 222.0
 text = "5G"
 
 [node name="FastfoodTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 283.0
+margin_top = 226.0
 margin_right = 128.0
-margin_bottom = 303.0
+margin_bottom = 246.0
 text = "Fast-food"
 
 [node name="LidlTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 307.0
+margin_top = 250.0
 margin_right = 128.0
-margin_bottom = 327.0
+margin_bottom = 270.0
 text = "Lidl"
 
 [node name="NertsTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 331.0
+margin_top = 274.0
 margin_right = 128.0
-margin_bottom = 351.0
+margin_bottom = 294.0
 text = "Nertsen"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]

@@ -24,6 +24,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Enemies/Enemy.gd"
 }, {
+"base": "Enemy",
+"class": "HealingEnemy",
+"language": "GDScript",
+"path": "res://Enemies/HealingEnemy.gd"
+}, {
+"base": "Control",
+"class": "Level",
+"language": "GDScript",
+"path": "res://Levels/Level.gd"
+}, {
 "base": "Effect",
 "class": "ShieldEffect",
 "language": "GDScript",
@@ -48,6 +58,8 @@ _global_script_class_icons={
 "CoronaEffect": "",
 "Effect": "",
 "Enemy": "",
+"HealingEnemy": "",
+"Level": "",
 "ShieldEffect": "",
 "SlowEffect": "",
 "Wave": "",

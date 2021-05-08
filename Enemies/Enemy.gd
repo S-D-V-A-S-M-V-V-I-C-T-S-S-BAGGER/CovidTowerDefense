@@ -2,19 +2,16 @@ extends Node2D
 class_name Enemy
 
 
-enum State { CREATED, SPAWNED, ALIVE, DEAD }
-enum Upgrades { NONE, SJAALTJE, IMPROV, MONDKAPJE, MEDISCH_KAPJE }
-
-export(NodePath) var path
+enum State { CREATED, SPAWNED, ALIVE, DEAD, FINISHED }
 
 
 # ##
 # # STATS
 # ##
 # Attributes that describe the state of the entity
-export(int) var base_health = 100
-export(int) var base_immunity = 0.5
-export(int) var base_speed = 300.0
+export(float) var base_health = 100.0
+export(float) var base_immunity = 0.5
+export(float) var base_speed = 300.0
 
 var immunity = 1.0
 var health: float
@@ -24,11 +21,11 @@ var effects = []
 var shield = null
 var state = State.CREATED
 
+var level : Level
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if path:
-		get_node("Path").curve = get_node(path).curve
 	
 	health = base_health
 	
@@ -36,10 +33,18 @@ func _ready() -> void:
 	state = State.SPAWNED
 
 
+func initialize(curve : Curve2D, parent_level : Level) -> void:
+	$Path.curve = curve
+
+	level = parent_level
+
+	level.enemies_spawned += 1
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	# First, process the dead state
-	if state == State.DEAD:
+	if state == State.DEAD || state == State.FINISHED:
 		return
 	elif health <= 0:
 		die()
@@ -75,8 +80,16 @@ func _process(delta: float) -> void:
 	
 	# Otherwise, continue
 	var cur_speed = base_speed * speed;
+	var movement: PathFollow2D = get_node("Path/MovingPoint")
+	movement.offset += cur_speed * delta
+
+	# Update animation speed
 	$Path/MovingPoint/AnimatedSprite.speed_scale = speed
-	get_node("Path/MovingPoint").offset += cur_speed * delta
+
+	# Check if we have reached the end of the path
+	if movement.unit_offset >= 1.0:
+		finish()
+		return
 
 
 func die():
@@ -84,11 +97,25 @@ func die():
 	if state == State.DEAD:
 		return
 	
+	level.enemies_killed += 1
+
 	$Path/MovingPoint/Area2D/Collision.disabled = true
 	$Path/MovingPoint/AnimatedSprite.speed_scale = 1.0
 	$Path/MovingPoint/AnimatedSprite.play("death")
 	on_die()
 	state = State.DEAD
+
+
+func finish():
+	level.enemies_arrived += 1
+
+	on_finish()
+	state == State.FINISHED
+	
+	# Prepare for deletion
+	$Path/MovingPoint/Area2D/Collision.disabled = true
+	queue_free()
+
 
 
 func damage(amount: float):
@@ -146,6 +173,10 @@ func on_spawn():
 
 # Maybe do something when this unit dies?
 func on_die():
+	pass
+
+# Handle this entity finishing the course
+func on_finish():
 	pass
 
 # Process damage, opportunity to increase / decrease the amount
