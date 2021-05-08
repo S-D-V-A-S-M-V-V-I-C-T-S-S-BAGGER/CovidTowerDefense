@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Gui/TowerOptions.gd" type="Script" id=1]
 [ext_resource path="res://Gui/TowerPositions.gd" type="Script" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://Towers/LidlTower.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Towers/NertsTower.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Towers/FastfoodTower.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Sounds/cough-files/cough1.mp3" type="AudioStream" id=10]
+[ext_resource path="res://Gui/AudioStreamPlayer.gd" type="Script" id=11]
 
 [node name="HUD" type="MarginContainer"]
 anchor_right = 1.0
@@ -125,9 +127,14 @@ margin_right = 128.0
 margin_bottom = 351.0
 text = "Nertsen"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 10 )
+script = ExtResource( 11 )
+
 [connection signal="pressed" from="SideBar/TowerOptions/BatTower" to="SideBar/TowerOptions" method="_on_BatTower_pressed"]
 [connection signal="pressed" from="SideBar/TowerOptions/SlowTower" to="SideBar/TowerOptions" method="_on_SlowTower_pressed"]
 [connection signal="pressed" from="SideBar/TowerOptions/CellTower" to="SideBar/TowerOptions" method="_on_CellTower_pressed"]
 [connection signal="pressed" from="SideBar/TowerOptions/FastfoodTower" to="SideBar/TowerOptions" method="_on_FastfoodTower_pressed"]
 [connection signal="pressed" from="SideBar/TowerOptions/LidlTower" to="SideBar/TowerOptions" method="_on_LidlTower_pressed"]
 [connection signal="pressed" from="SideBar/TowerOptions/NertsTower" to="SideBar/TowerOptions" method="_on_NertsTower_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="AudioStreamPlayer" method="sound_delay"]

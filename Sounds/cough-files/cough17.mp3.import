@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cough17.mp3-b70549717a4dcb608bcfc092e2d150ff.mp3str"
+
+[deps]
+
+source_file="res://Sounds/cough-files/cough17.mp3"
+dest_files=[ "res://.import/cough17.mp3-b70549717a4dcb608bcfc092e2d150ff.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
