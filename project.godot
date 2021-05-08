@@ -57,7 +57,7 @@ _global_script_class_icons={
 [application]
 
 config/name="CovidTowerDefense"
-run/main_scene="res://Menus/MainMenu/MainMenu.tscn"
+run/main_scene="res://Menus/SplashScreen/SplashScreen.tscn"
 config/icon="res://icon.png"
 
 [layer_names]
