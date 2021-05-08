@@ -8,6 +8,7 @@ export (PackedScene) var bat_tower
 export (PackedScene) var slow_tower
 export (PackedScene) var cell_tower
 export (PackedScene) var fastfood_tower
+export (PackedScene) var lidl_tower
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -43,3 +44,7 @@ func _on_CellTower_pressed():
 
 func _on_FastfoodTower_pressed():
 	place_tower(fastfood_tower)
+
+
+func _on_LidlTower_pressed():
+	place_tower(lidl_tower)
