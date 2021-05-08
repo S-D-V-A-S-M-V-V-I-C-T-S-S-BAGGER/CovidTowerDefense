@@ -17,7 +17,7 @@ var enemy_parent : Node
 func _ready() -> void:
 	spawn_time_label = $SideBar/SpawnTimer/HBox/TimerLabel
 	spawner = get_node(spawner_path)
-	enemy_counter_label = $SideBar/Score/HBox/ScoreValueLabel
+	enemy_counter_label = $SideBar/EnemyCounter/HBox/EnemyCounterValueLabel
 	enemy_parent = get_node(enemy_parent_path)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

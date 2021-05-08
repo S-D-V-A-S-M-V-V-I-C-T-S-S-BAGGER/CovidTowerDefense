@@ -54,9 +54,8 @@ func done():
 func spawn():
 	var enemy_scene : PackedScene = enemies.pop_front()
 	if enemy_scene:
-		var enemy = enemy_scene.instance()
-		enemy.get_node("Path").curve = get_node(path).curve
+		var enemy : Enemy = enemy_scene.instance()
+		enemy.initialize(get_node(path).curve, owner)
 		enemies_parent.add_child(enemy)
-		level.enemies_spawned += 1
 	else:
 		load_wave()

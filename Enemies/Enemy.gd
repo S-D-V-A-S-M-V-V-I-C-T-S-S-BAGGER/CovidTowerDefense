@@ -33,10 +33,10 @@ func _ready() -> void:
 	state = State.SPAWNED
 
 
-func initialize(curve : Curve2D) -> void:
+func initialize(curve : Curve2D, parent_level : Level) -> void:
 	$Path.curve = curve
 
-	level = owner
+	level = parent_level
 
 	level.enemies_spawned += 1
 
