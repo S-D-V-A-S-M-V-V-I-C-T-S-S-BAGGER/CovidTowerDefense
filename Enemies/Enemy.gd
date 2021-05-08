@@ -9,9 +9,9 @@ enum State { CREATED, SPAWNED, ALIVE, DEAD, FINISHED }
 # # STATS
 # ##
 # Attributes that describe the state of the entity
-export(int) var base_health = 100
-export(int) var base_immunity = 0.5
-export(int) var base_speed = 300.0
+export(float) var base_health = 100.0
+export(float) var base_immunity = 0.5
+export(float) var base_speed = 300.0
 
 var immunity = 1.0
 var health: float
@@ -44,7 +44,7 @@ func initialize(curve : Curve2D, parent_level : Level) -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	# First, process the dead state
-	if state == State.DEAD:
+	if state == State.DEAD || state == State.FINISHED:
 		return
 	elif health <= 0:
 		die()
