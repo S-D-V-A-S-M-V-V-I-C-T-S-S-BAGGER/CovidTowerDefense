@@ -33,6 +33,10 @@ export (Texture) var nerts_tower_texture
 export (String) var nerts_tower_name
 export (String) var nerts_tower_description
 
+export (Texture) var internet_tower_texture
+export (String) var internet_tower_name
+export (String) var internet_tower_description
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	update_preview(default_texture, default_name, default_description)
@@ -71,3 +75,6 @@ func _on_LidlTower_mouse_entered() -> void:
 
 func _on_NertsTower_mouse_entered() -> void:
 	update_preview(nerts_tower_texture, nerts_tower_name, nerts_tower_description)
+	
+func _on_InternetTower_mouse_entered() -> void:
+	update_preview(internet_tower_texture, internet_tower_name, internet_tower_description)
