@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Gui/TowerOptions.gd" type="Script" id=1]
 [ext_resource path="res://Gui/TowerPositions.gd" type="Script" id=2]
@@ -17,6 +17,8 @@
 [ext_resource path="res://Sprites/zendmast.png" type="Texture" id=15]
 [ext_resource path="res://Sprites/mcdrive.png" type="Texture" id=16]
 [ext_resource path="res://PlaceHolders/TowerPlaceholder.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/lidl.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/nertsboerderij.png" type="Texture" id=19]
 
 [sub_resource type="DynamicFont" id=1]
 size = 18
@@ -234,14 +236,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 default_texture = ExtResource( 10 )
+default_description = "Hello I am a tower, place me somewhere :)"
 bat_tower_texture = ExtResource( 14 )
+bat_tower_name = "Bat Cave"
+bat_tower_description = "Occasionally spawns (1) bat that will infect one civilian, can store up to (3) bats at once."
 slow_tower_texture = ExtResource( 17 )
 cell_tower_texture = ExtResource( 15 )
+cell_tower_name = "5G Cell tower"
+cell_tower_description = "The transmission tower emits a 5G-signal that weakens the \"vaccines\"."
 fastfood_tower_texture = ExtResource( 16 )
+fastfood_tower_name = "Fast-food restaurant"
+fastfood_tower_description = "Increases the obesitas rate of passing enemies, slowing and weakening them."
+lidl_tower_texture = ExtResource( 18 )
+lidl_tower_name = "Lidl"
+lidl_tower_description = "Will turn civilians into wappies, and similar downgrades for other enemies."
+nerts_tower_texture = ExtResource( 19 )
+nerts_tower_name = "Mink farm"
+nerts_tower_description = "Occasionally spawns (1) mink that will go around infecting people."
 
 [node name="VBoxContainer" type="VBoxContainer" parent="SideBar/TowerPreview"]
 margin_right = 128.0
-margin_bottom = 128.0
+margin_bottom = 222.0
 size_flags_vertical = 3
 
 [node name="CenterContainer" type="CenterContainer" parent="SideBar/TowerPreview/VBoxContainer"]
@@ -266,12 +281,11 @@ clip_text = true
 [node name="TowerDescription" type="Label" parent="SideBar/TowerPreview/VBoxContainer"]
 margin_top = 63.0
 margin_right = 128.0
-margin_bottom = 128.0
+margin_bottom = 222.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
 text = "a short description of how this tower works"
 autowrap = true
-clip_text = true
 
 [connection signal="mouse_entered" from="SideBar/TowerOptions/BatTower" to="SideBar/TowerPreview" method="_on_BatTower_mouse_entered"]
 [connection signal="pressed" from="SideBar/TowerOptions/BatTower" to="SideBar/TowerOptions" method="_on_BatTower_pressed"]

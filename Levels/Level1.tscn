@@ -89,12 +89,6 @@ enemy_parent_path = NodePath("../Enemies")
 spawner_path = NodePath("../../Spawner")
 enemy_parent_path = NodePath("../../Enemies")
 
-[node name="Panel" parent="CanvasLayer/HUD" index="0"]
-margin_right = 128.0
-
-[node name="TowerPositions" parent="CanvasLayer/HUD" index="1"]
-margin_right = 128.0
-
 [node name="TowerPlacer" parent="CanvasLayer/HUD/TowerPositions" index="0" instance=ExtResource( 9 )]
 position = Vector2( 336, 80 )
 
@@ -113,75 +107,8 @@ position = Vector2( 336, 208 )
 [node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer3" index="2"]
 position = Vector2( 32, 0 )
 
-[node name="SideBar" parent="CanvasLayer/HUD" index="2"]
-margin_right = 128.0
-
 [node name="Bank" parent="CanvasLayer/HUD/SideBar" index="0"]
-margin_right = 128.0
 money = 10
-
-[node name="Text" parent="CanvasLayer/HUD/SideBar/Bank" index="0"]
-margin_right = 118.0
-
-[node name="SpawnTimer" parent="CanvasLayer/HUD/SideBar" index="1"]
-margin_right = 128.0
-
-[node name="HBox" parent="CanvasLayer/HUD/SideBar/SpawnTimer" index="0"]
-margin_right = 118.0
-
-[node name="EnemyCounter" parent="CanvasLayer/HUD/SideBar" index="2"]
-margin_right = 128.0
-
-[node name="HBox" parent="CanvasLayer/HUD/SideBar/EnemyCounter" index="0"]
-margin_right = 118.0
-
-[node name="Score" parent="CanvasLayer/HUD/SideBar" index="3"]
-margin_right = 128.0
-
-[node name="HBox" parent="CanvasLayer/HUD/SideBar/Score" index="0"]
-margin_right = 118.0
-
-[node name="TowerOptions" parent="CanvasLayer/HUD/SideBar" index="4"]
-margin_right = 128.0
-
-[node name="BatTower" parent="CanvasLayer/HUD/SideBar/TowerOptions" index="0"]
-margin_right = 128.0
-
-[node name="SlowTower" parent="CanvasLayer/HUD/SideBar/TowerOptions" index="1"]
-margin_right = 128.0
-
-[node name="CellTower" parent="CanvasLayer/HUD/SideBar/TowerOptions" index="2"]
-margin_right = 128.0
-
-[node name="FastfoodTower" parent="CanvasLayer/HUD/SideBar/TowerOptions" index="3"]
-margin_right = 128.0
-
-[node name="LidlTower" parent="CanvasLayer/HUD/SideBar/TowerOptions" index="4"]
-margin_right = 128.0
-
-[node name="NertsTower" parent="CanvasLayer/HUD/SideBar/TowerOptions" index="5"]
-margin_right = 128.0
-
-[node name="TowerPreview" parent="CanvasLayer/HUD/SideBar" index="5"]
-margin_right = 128.0
-
-[node name="VBoxContainer" parent="CanvasLayer/HUD/SideBar/TowerPreview" index="0"]
-margin_right = 128.0
-margin_bottom = 128.0
-
-[node name="CenterContainer" parent="CanvasLayer/HUD/SideBar/TowerPreview/VBoxContainer" index="0"]
-margin_right = 128.0
-
-[node name="TextureRect" parent="CanvasLayer/HUD/SideBar/TowerPreview/VBoxContainer/CenterContainer" index="0"]
-margin_left = 48.0
-margin_right = 80.0
-
-[node name="TowerName" parent="CanvasLayer/HUD/SideBar/TowerPreview/VBoxContainer" index="1"]
-margin_right = 128.0
-
-[node name="TowerDescription" parent="CanvasLayer/HUD/SideBar/TowerPreview/VBoxContainer" index="2"]
-margin_right = 128.0
-margin_bottom = 128.0
 
 [node name="EndScreen" type="ColorRect" parent="CanvasLayer"]
 visible = false

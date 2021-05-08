@@ -28,7 +28,6 @@ func sound_delay():
 
 	# Continue when the timeout signal is send
 	yield(timer, "timeout")
-	print("some seconds later")
 
 	# Clean up
 	timer.queue_free()
