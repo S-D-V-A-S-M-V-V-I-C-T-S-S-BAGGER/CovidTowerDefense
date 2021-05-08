@@ -24,6 +24,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Enemies/Enemy.gd"
 }, {
+"base": "Control",
+"class": "Level",
+"language": "GDScript",
+"path": "res://Levels/Level.gd"
+}, {
 "base": "Effect",
 "class": "ShieldEffect",
 "language": "GDScript",
@@ -48,6 +53,7 @@ _global_script_class_icons={
 "CoronaEffect": "",
 "Effect": "",
 "Enemy": "",
+"Level": "",
 "ShieldEffect": "",
 "SlowEffect": "",
 "Wave": "",
