@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://PlaceHolders/PlaceHolderTile.png" type="Texture" id=1]
 [ext_resource path="res://PlaceHolders/Background.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Levels/Level.gd" type="Script" id=4]
 [ext_resource path="res://Sprites/MilasianCircaBoldPERSONAL.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Sprites/Trueno-wml2.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://Gui/AudioStreamPlayer.gd" type="Script" id=7]
 [ext_resource path="res://Gui/HUD.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Gui/TowerPlacer.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Levels/Waves/Spawner.tscn" type="PackedScene" id=10]
@@ -109,6 +110,9 @@ position = Vector2( 32, 0 )
 
 [node name="Bank" parent="CanvasLayer/HUD/SideBar" index="0"]
 money = 10
+
+[node name="AudioStreamPlayer" parent="CanvasLayer/HUD" index="3"]
+script = ExtResource( 7 )
 
 [node name="EndScreen" type="ColorRect" parent="CanvasLayer"]
 visible = false
