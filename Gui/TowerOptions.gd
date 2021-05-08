@@ -1,14 +1,11 @@
 extends Panel
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 export (PackedScene) var bat_tower
 export (PackedScene) var slow_tower
 export (PackedScene) var cell_tower
 export (PackedScene) var fastfood_tower
 export (PackedScene) var lidl_tower
+export (PackedScene) var nerts_tower
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -48,3 +45,7 @@ func _on_FastfoodTower_pressed():
 
 func _on_LidlTower_pressed():
 	place_tower(lidl_tower)
+
+
+func _on_NertsTower_pressed():
+	place_tower(nerts_tower)

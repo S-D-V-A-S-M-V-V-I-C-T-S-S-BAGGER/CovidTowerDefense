@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Gui/TowerOptions.gd" type="Script" id=1]
 [ext_resource path="res://Gui/TowerPositions.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Towers/CellTower.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Towers/FastfoodTower.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Towers/LidlTower.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Towers/NertsTower.tscn" type="PackedScene" id=8]
 
 [node name="HUD" type="Node2D"]
 
@@ -20,7 +21,7 @@ __meta__ = {
 
 [node name="TowerOptions" type="Panel" parent="."]
 margin_right = 73.0
-margin_bottom = 128.0
+margin_bottom = 173.0
 rect_rotation = 0.147696
 script = ExtResource( 1 )
 __meta__ = {
@@ -31,6 +32,7 @@ slow_tower = ExtResource( 3 )
 cell_tower = ExtResource( 5 )
 fastfood_tower = ExtResource( 6 )
 lidl_tower = ExtResource( 7 )
+nerts_tower = ExtResource( 8 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TowerOptions"]
 margin_right = 62.0
@@ -74,8 +76,15 @@ margin_right = 71.0
 margin_bottom = 116.0
 text = "Lidl"
 
+[node name="NertsTower" type="Button" parent="TowerOptions/VBoxContainer"]
+margin_top = 120.0
+margin_right = 71.0
+margin_bottom = 140.0
+text = "Nertsen"
+
 [connection signal="pressed" from="TowerOptions/VBoxContainer/BatTower" to="TowerOptions" method="_on_BatTower_pressed"]
 [connection signal="pressed" from="TowerOptions/VBoxContainer/SlowTower" to="TowerOptions" method="_on_SlowTower_pressed"]
 [connection signal="pressed" from="TowerOptions/VBoxContainer/CellTower" to="TowerOptions" method="_on_CellTower_pressed"]
 [connection signal="pressed" from="TowerOptions/VBoxContainer/FastfoodTower" to="TowerOptions" method="_on_FastfoodTower_pressed"]
 [connection signal="pressed" from="TowerOptions/VBoxContainer/LidlTower" to="TowerOptions" method="_on_LidlTower_pressed"]
+[connection signal="pressed" from="TowerOptions/VBoxContainer/NertsTower" to="TowerOptions" method="_on_NertsTower_pressed"]
