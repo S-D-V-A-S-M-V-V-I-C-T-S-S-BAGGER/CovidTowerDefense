@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Gui/TowerOptions.gd" type="Script" id=1]
 [ext_resource path="res://Gui/TowerPositions.gd" type="Script" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://Towers/BatTower.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Towers/CellTower.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Towers/Tower.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Towers/LidlTower.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Towers/NertsTower.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Towers/FastfoodTower.tscn" type="PackedScene" id=9]
 
 [node name="HUD" type="MarginContainer"]
 anchor_right = 1.0
@@ -76,31 +79,55 @@ __meta__ = {
 bat_tower = ExtResource( 4 )
 slow_tower = ExtResource( 6 )
 cell_tower = ExtResource( 5 )
+fastfood_tower = ExtResource( 9 )
+lidl_tower = ExtResource( 7 )
+nerts_tower = ExtResource( 8 )
 
 [node name="BatTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 247.0
+margin_top = 211.0
 margin_right = 128.0
-margin_bottom = 267.0
+margin_bottom = 231.0
 text = "Bat"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="SlowTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 271.0
+margin_top = 235.0
 margin_right = 128.0
-margin_bottom = 291.0
+margin_bottom = 255.0
 text = "Slow"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CellTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 295.0
+margin_top = 259.0
 margin_right = 128.0
-margin_bottom = 315.0
+margin_bottom = 279.0
 text = "5G"
+
+[node name="FastfoodTower" type="Button" parent="SideBar/TowerOptions"]
+margin_top = 283.0
+margin_right = 128.0
+margin_bottom = 303.0
+text = "Fast-food"
+
+[node name="LidlTower" type="Button" parent="SideBar/TowerOptions"]
+margin_top = 307.0
+margin_right = 128.0
+margin_bottom = 327.0
+text = "Lidl"
+
+[node name="NertsTower" type="Button" parent="SideBar/TowerOptions"]
+margin_top = 331.0
+margin_right = 128.0
+margin_bottom = 351.0
+text = "Nertsen"
 
 [connection signal="pressed" from="SideBar/TowerOptions/BatTower" to="SideBar/TowerOptions" method="_on_BatTower_pressed"]
 [connection signal="pressed" from="SideBar/TowerOptions/SlowTower" to="SideBar/TowerOptions" method="_on_SlowTower_pressed"]
 [connection signal="pressed" from="SideBar/TowerOptions/CellTower" to="SideBar/TowerOptions" method="_on_CellTower_pressed"]
+[connection signal="pressed" from="SideBar/TowerOptions/FastfoodTower" to="SideBar/TowerOptions" method="_on_FastfoodTower_pressed"]
+[connection signal="pressed" from="SideBar/TowerOptions/LidlTower" to="SideBar/TowerOptions" method="_on_LidlTower_pressed"]
+[connection signal="pressed" from="SideBar/TowerOptions/NertsTower" to="SideBar/TowerOptions" method="_on_NertsTower_pressed"]
