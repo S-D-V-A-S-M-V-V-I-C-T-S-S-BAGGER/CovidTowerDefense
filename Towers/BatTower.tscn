@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Towers/BatTower.gd" type="Script" id=1]
 [ext_resource path="res://PlaceHolders/BatsPlaceholder.png" type="Texture" id=2]
-[ext_resource path="res://PlaceHolders/TowerPlaceholder.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/grot.png" type="Texture" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -60,6 +60,8 @@ script = ExtResource( 1 )
 time_between_bats = 7.0
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -1.43527, -0.0956873 )
+scale = Vector2( 0.583775, 0.583775 )
 texture = ExtResource( 3 )
 
 [node name="Bat" type="Area2D" parent="."]
