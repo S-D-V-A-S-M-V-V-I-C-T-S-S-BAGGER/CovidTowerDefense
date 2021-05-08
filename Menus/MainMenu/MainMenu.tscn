@@ -54,8 +54,10 @@ margin_right = 784.0
 margin_bottom = 440.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_constants/margin_top = 20
 
 [node name="VBox" type="VBoxContainer" parent="Margin/VBox/Margin"]
+margin_top = 20.0
 margin_right = 784.0
 margin_bottom = 332.0
 
