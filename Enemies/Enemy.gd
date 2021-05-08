@@ -27,7 +27,7 @@ var state = State.CREATED
 func _ready() -> void:
 	if path:
 		get_node("Path").curve = get_node(path).curve
-        
+		
 	on_spawn()
 	state = State.SPAWNED
 
@@ -70,9 +70,6 @@ func _process(delta: float) -> void:
 	get_node("Path/MovingPoint").offset += speed * delta
 
 
-func process_speed_tower(speed_mod):
-	speed_modifier *= speed_mod
-
 func die():
 	# Cannot die multiple times
 	if state == State.DEAD:
@@ -104,7 +101,7 @@ func heal(amount: int):
 		health = base_health
 
 
-func add_effect(effect: Effect):
+func add_effect(effect):
 	if not on_effect(effect):
 		effects.append(effect)
 
@@ -128,6 +125,6 @@ func on_damaged(amount: int) -> int:
 	return amount
 
 # Process the applied effect, opportunity to cancel the effect
-func on_effect(effect: Effect) -> bool:
+func on_effect(effect) -> bool:
 	return true
 
