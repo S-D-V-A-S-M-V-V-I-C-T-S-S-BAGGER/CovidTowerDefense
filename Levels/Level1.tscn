@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://PlaceHolders/PlaceHolderTile.png" type="Texture" id=1]
 [ext_resource path="res://PlaceHolders/Background.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Levels/Level.gd" type="Script" id=4]
 [ext_resource path="res://Sprites/MilasianCircaBoldPERSONAL.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Sprites/Trueno-wml2.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://Videos/IA_intro.webm" type="VideoStream" id=7]
 [ext_resource path="res://Gui/HUD.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Gui/TowerPlacer.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Levels/Waves/Spawner.tscn" type="PackedScene" id=10]
@@ -86,8 +87,6 @@ enemy_parent_path = NodePath("../Enemies")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource( 8 )]
-spawner_path = NodePath("../../Spawner")
-enemy_parent_path = NodePath("../../Enemies")
 
 [node name="TowerPlacer" parent="CanvasLayer/HUD/TowerPositions" index="0" instance=ExtResource( 9 )]
 position = Vector2( 336, 80 )
@@ -106,6 +105,12 @@ position = Vector2( 336, 208 )
 
 [node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer3" index="2"]
 position = Vector2( 32, 0 )
+
+[node name="VBoxContainer" parent="CanvasLayer/HUD/SideBar/TowerPreview" index="0"]
+margin_bottom = 144.0
+
+[node name="TowerDescription" parent="CanvasLayer/HUD/SideBar/TowerPreview/VBoxContainer" index="2"]
+margin_bottom = 144.0
 
 [node name="VBoxContainer" parent="CanvasLayer/HUD/SideBar/TowerPreview" index="0"]
 margin_bottom = 144.0
@@ -176,7 +181,57 @@ margin_right = 342.0
 margin_bottom = 40.0
 text = "Return to Menu"
 
+[node name="NewEnemy" type="ColorRect" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.376471, 0.376471, 0.376471, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FinishedLabel" type="Label" parent="CanvasLayer/NewEnemy"]
+margin_top = 12.0467
+margin_right = 1023.0
+margin_bottom = 92.0467
+custom_fonts/font = SubResource( 3 )
+text = "New Enemy!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VideoPlayer" type="VideoPlayer" parent="CanvasLayer/NewEnemy"]
+margin_left = 80.0
+margin_top = 104.0
+margin_right = 943.0
+margin_bottom = 554.0
+stream = ExtResource( 7 )
+autoplay = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/NewEnemy"]
+margin_top = 549.573
+margin_right = 1023.0
+margin_bottom = 589.573
+custom_constants/margin_right = 80
+custom_constants/margin_top = 20
+custom_constants/margin_left = 80
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuButton" type="Button" parent="CanvasLayer/NewEnemy/MarginContainer"]
+margin_left = 80.0
+margin_top = 20.0
+margin_right = 943.0
+margin_bottom = 40.0
+text = "Continue"
+
 [connection signal="pressed" from="CanvasLayer/EndScreen/CenterContainer/VBoxContainer/MarginContainer/MenuButton" to="." method="_on_MenuButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/NewEnemy/MarginContainer/MenuButton" to="." method="_on_MenuButton_pressed"]
 
 [editable path="CanvasLayer/HUD"]
 [editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer"]
