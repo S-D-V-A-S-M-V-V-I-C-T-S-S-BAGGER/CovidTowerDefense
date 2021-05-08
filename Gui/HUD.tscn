@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Gui/TowerOptions.gd" type="Script" id=1]
 [ext_resource path="res://Gui/TowerPositions.gd" type="Script" id=2]
@@ -9,9 +9,24 @@
 [ext_resource path="res://Towers/LidlTower.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Towers/NertsTower.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Towers/FastfoodTower.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Sounds/cough-files/cough1.mp3" type="AudioStream" id=10]
+[ext_resource path="res://PlaceHolders/SpotPathPositionIndicatorPlaceholder.png" type="Texture" id=10]
 [ext_resource path="res://Gui/HUD.gd" type="Script" id=11]
-[ext_resource path="res://Gui/AudioStreamPlayer.gd" type="Script" id=12]
+[ext_resource path="res://Gui/TowerPreview.gd" type="Script" id=12]
+[ext_resource path="res://Sprites/Trueno-wml2.otf" type="DynamicFontData" id=13]
+[ext_resource path="res://Sprites/grot.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/zendmast.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/mcdrive.png" type="Texture" id=16]
+[ext_resource path="res://PlaceHolders/TowerPlaceholder.png" type="Texture" id=17]
+
+[sub_resource type="DynamicFont" id=1]
+size = 18
+use_filter = true
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 14
+use_filter = true
+font_data = ExtResource( 13 )
 
 [node name="HUD" type="MarginContainer"]
 anchor_right = 1.0
@@ -150,7 +165,7 @@ text = "0"
 [node name="TowerOptions" type="VBoxContainer" parent="SideBar"]
 margin_top = 152.0
 margin_right = 128.0
-margin_bottom = 600.0
+margin_bottom = 374.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
@@ -166,55 +181,107 @@ lidl_tower = ExtResource( 7 )
 nerts_tower = ExtResource( 8 )
 
 [node name="BatTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 154.0
+margin_top = 41.0
 margin_right = 128.0
-margin_bottom = 174.0
+margin_bottom = 61.0
 text = "Bat"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="SlowTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 178.0
+margin_top = 65.0
 margin_right = 128.0
-margin_bottom = 198.0
+margin_bottom = 85.0
 text = "Slow"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CellTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 202.0
+margin_top = 89.0
 margin_right = 128.0
-margin_bottom = 222.0
+margin_bottom = 109.0
 text = "5G"
 
 [node name="FastfoodTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 226.0
+margin_top = 113.0
 margin_right = 128.0
-margin_bottom = 246.0
+margin_bottom = 133.0
 text = "Fast-food"
 
 [node name="LidlTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 250.0
+margin_top = 137.0
 margin_right = 128.0
-margin_bottom = 270.0
+margin_bottom = 157.0
 text = "Lidl"
 
 [node name="NertsTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 274.0
+margin_top = 161.0
 margin_right = 128.0
-margin_bottom = 294.0
+margin_bottom = 181.0
 text = "Nertsen"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 10 )
+[node name="TowerPreview" type="AspectRatioContainer" parent="SideBar"]
+margin_top = 378.0
+margin_right = 128.0
+margin_bottom = 600.0
+size_flags_vertical = 3
+stretch_mode = 0
+alignment_vertical = 0
 script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+default_texture = ExtResource( 10 )
+bat_tower_texture = ExtResource( 14 )
+slow_tower_texture = ExtResource( 17 )
+cell_tower_texture = ExtResource( 15 )
+fastfood_tower_texture = ExtResource( 16 )
 
+[node name="VBoxContainer" type="VBoxContainer" parent="SideBar/TowerPreview"]
+margin_right = 128.0
+margin_bottom = 128.0
+size_flags_vertical = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="SideBar/TowerPreview/VBoxContainer"]
+margin_right = 128.0
+margin_bottom = 32.0
+
+[node name="TextureRect" type="TextureRect" parent="SideBar/TowerPreview/VBoxContainer/CenterContainer"]
+margin_left = 48.0
+margin_right = 80.0
+margin_bottom = 32.0
+texture = ExtResource( 10 )
+
+[node name="TowerName" type="Label" parent="SideBar/TowerPreview/VBoxContainer"]
+margin_top = 36.0
+margin_right = 128.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 1 )
+text = "Tower Name"
+align = 1
+clip_text = true
+
+[node name="TowerDescription" type="Label" parent="SideBar/TowerPreview/VBoxContainer"]
+margin_top = 63.0
+margin_right = 128.0
+margin_bottom = 128.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "a short description of how this tower works"
+autowrap = true
+clip_text = true
+
+[connection signal="mouse_entered" from="SideBar/TowerOptions/BatTower" to="SideBar/TowerPreview" method="_on_BatTower_mouse_entered"]
 [connection signal="pressed" from="SideBar/TowerOptions/BatTower" to="SideBar/TowerOptions" method="_on_BatTower_pressed"]
+[connection signal="mouse_entered" from="SideBar/TowerOptions/SlowTower" to="SideBar/TowerPreview" method="_on_SlowTower_mouse_entered"]
 [connection signal="pressed" from="SideBar/TowerOptions/SlowTower" to="SideBar/TowerOptions" method="_on_SlowTower_pressed"]
+[connection signal="mouse_entered" from="SideBar/TowerOptions/CellTower" to="SideBar/TowerPreview" method="_on_CellTower_mouse_entered"]
 [connection signal="pressed" from="SideBar/TowerOptions/CellTower" to="SideBar/TowerOptions" method="_on_CellTower_pressed"]
+[connection signal="mouse_entered" from="SideBar/TowerOptions/FastfoodTower" to="SideBar/TowerPreview" method="_on_FastfoodTower_mouse_entered"]
 [connection signal="pressed" from="SideBar/TowerOptions/FastfoodTower" to="SideBar/TowerOptions" method="_on_FastfoodTower_pressed"]
+[connection signal="mouse_entered" from="SideBar/TowerOptions/LidlTower" to="SideBar/TowerPreview" method="_on_LidlTower_mouse_entered"]
 [connection signal="pressed" from="SideBar/TowerOptions/LidlTower" to="SideBar/TowerOptions" method="_on_LidlTower_pressed"]
+[connection signal="mouse_entered" from="SideBar/TowerOptions/NertsTower" to="SideBar/TowerPreview" method="_on_NertsTower_mouse_entered"]
 [connection signal="pressed" from="SideBar/TowerOptions/NertsTower" to="SideBar/TowerOptions" method="_on_NertsTower_pressed"]
-[connection signal="finished" from="AudioStreamPlayer" to="AudioStreamPlayer" method="sound_delay"]
