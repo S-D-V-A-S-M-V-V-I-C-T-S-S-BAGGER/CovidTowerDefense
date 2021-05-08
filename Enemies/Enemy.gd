@@ -2,7 +2,7 @@ extends Node2D
 class_name Enemy
 
 
-enum State { CREATED, SPAWNED, ALIVE, DEAD }
+enum State { CREATED, SPAWNED, ALIVE, DEAD, FINISHED }
 
 export(NodePath) var path
 
@@ -77,12 +77,13 @@ func _process(delta: float) -> void:
 	var movement: PathFollow2D = get_node("Path/MovingPoint")
 	movement.offset += cur_speed * delta
 	
-	if movement.unit_offset >= 1.0:
-		pass
-	
-	
 	# Update animation speed
 	$Path/MovingPoint/AnimatedSprite.speed_scale = speed
+	
+	# Check if we have reached the end of the path
+	if movement.unit_offset >= 1.0:
+		finish()
+		return
 
 
 func die():
@@ -103,7 +104,6 @@ func finish():
 	
 	# Prepare for deletion
 	$Path/MovingPoint/Area2D/Collision.disabled = true
-	
 
 
 func damage(amount: float):
