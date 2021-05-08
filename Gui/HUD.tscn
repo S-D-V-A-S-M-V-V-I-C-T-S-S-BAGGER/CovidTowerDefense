@@ -236,7 +236,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 default_texture = ExtResource( 10 )
-default_description = "Hello I am a tower, place me somewhere :)"
+default_name = ""
+default_description = "Hover over the buttons to get a description of a tower"
 bat_tower_texture = ExtResource( 14 )
 bat_tower_name = "Bat Cave"
 bat_tower_description = "Occasionally spawns (1) bat that will infect one civilian, can store up to (3) bats at once."
