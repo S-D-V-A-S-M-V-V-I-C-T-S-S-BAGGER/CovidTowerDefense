@@ -110,6 +110,12 @@ position = Vector2( 32, 0 )
 [node name="Bank" parent="CanvasLayer/HUD/SideBar" index="0"]
 money = 10
 
+[node name="VBoxContainer" parent="CanvasLayer/HUD/SideBar/TowerPreview" index="0"]
+margin_bottom = 144.0
+
+[node name="TowerDescription" parent="CanvasLayer/HUD/SideBar/TowerPreview/VBoxContainer" index="2"]
+margin_bottom = 144.0
+
 [node name="EndScreen" type="ColorRect" parent="CanvasLayer"]
 visible = false
 anchor_right = 1.0

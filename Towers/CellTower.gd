@@ -21,6 +21,7 @@ func _process(delta: float) -> void:
 
 func _on_Collision_area_shape_entered(area_id: int, area: Area2D, area_shape: int, local_shape: int) -> void:
 	var enemy = get_node(area.get_path()).get_parent().get_parent().get_parent()
-	enemy.add_effect(SlowEffect.new(enemy, 5, 0.5))
+	#enemy.add_effect(SlowEffect.new(enemy, 5, 0.5))
+	enemy.add_effect(CoronaEffect.new(enemy, -1, 100, 1))
 	#set("speed_modifier", 1.5)
 	

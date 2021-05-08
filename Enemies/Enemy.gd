@@ -16,6 +16,7 @@ export(float) var base_speed = 300.0
 var immunity = 1.0
 var health: float
 var speed = 1.0
+var random = RandomNumberGenerator.new()
 
 var effects = []
 var shield = null
@@ -49,14 +50,11 @@ func _process(delta: float) -> void:
 	elif health <= 0:
 		die()
 		return
-	
+
 	# Then initialize the base case
 	immunity = base_immunity
 	speed = 1.0
-	
-	if is_infected():
-		push_warning("CORONA, WE GAAN DOOD")
-	
+
 	# Process all effects
 	var expired = []
 	for effect in effects:
@@ -81,6 +79,12 @@ func _process(delta: float) -> void:
 		die()
 		return
 	
+	# Randomly decide to maybe play a coughing sound if infected
+	if self.is_infected():
+		random.randomize()
+		if random.randi_range(0, 50) < 1:
+			$CoughPlayer.play_random_sound()
+
 	# Otherwise, continue
 	var cur_speed = base_speed * speed;
 	var movement: PathFollow2D = get_node("Path/MovingPoint")
