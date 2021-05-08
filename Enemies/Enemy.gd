@@ -28,6 +28,9 @@ func _process(delta: float) -> void:
 		die()
 
 
+func process_speed_tower(speed_mod):
+	speed_modifier *= speed_mod
+
 func die():
 	$Path/MovingPoint/Area2D/Collision.disabled = true
 	$Path/MovingPoint/AnimatedSprite.speed_scale = 1.0

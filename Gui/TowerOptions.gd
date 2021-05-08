@@ -1,4 +1,4 @@
-extends Panel
+extends VBoxContainer
 
 
 # Declare member variables here. Examples:
