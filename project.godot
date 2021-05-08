@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "Enemy",
 "language": "GDScript",
 "path": "res://Enemies/Enemy.gd"
+}, {
+"base": "Node",
+"class": "Wave",
+"language": "GDScript",
+"path": "res://Levels/Waves/Wave.gd"
 } ]
 _global_script_class_icons={
-"Enemy": ""
+"Enemy": "",
+"Wave": ""
 }
 
 [application]

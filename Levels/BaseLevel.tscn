@@ -1,14 +1,13 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://PlaceHolders/PlaceHolderTile.png" type="Texture" id=1]
 [ext_resource path="res://PlaceHolders/Background.png" type="Texture" id=2]
 [ext_resource path="res://Enemies/Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Levels/BaseLevelEnemyPath.tres" type="Curve2D" id=4]
-[ext_resource path="res://Towers/Tower.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Towers/BatTower.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Towers/CellTower.gd" type="Script" id=7]
 [ext_resource path="res://Gui/HUD.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Gui/TowerPlacer.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Levels/Waves/Spawner.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Levels/Waves/Wave.tscn" type="PackedScene" id=11]
 
 [sub_resource type="TileSet" id=1]
 0/name = "PlaceHolderTile.png 0"
@@ -33,6 +32,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Waves" type="Node" parent="."]
+
+[node name="Wave1" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 5.0
+time_before_start = 10.0
+
 [node name="BackGround" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -48,24 +54,13 @@ cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608, 0, 0, 262144, 0, 0, 327680, 0, 0, 393216, 0, 0, 458752, 0, 0, 524288, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0 )
 
-[node name="Path2D" type="Path2D" parent="."]
+[node name="Path" type="Path2D" parent="."]
 curve = ExtResource( 4 )
 
-[node name="Enemy" parent="." instance=ExtResource( 3 )]
-path = NodePath("../Path2D")
-
-[node name="Tower" parent="." instance=ExtResource( 5 )]
-position = Vector2( 355.573, 136.759 )
-
-[node name="CellTower1" parent="." instance=ExtResource( 5 )]
-position = Vector2( 847.573, 254.759 )
-script = ExtResource( 7 )
-
-[node name="BatTower" parent="." instance=ExtResource( 6 )]
-position = Vector2( 566.063, 52.3251 )
-
-[node name="BatTower2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 640.983, 262.815 )
+[node name="SpawnPoint" parent="." instance=ExtResource( 10 )]
+position = Vector2( 179.605, 168.291 )
+path = NodePath("../Path")
+wave_parent = NodePath("../Waves")
 
 [node name="HUD" parent="." instance=ExtResource( 8 )]
 

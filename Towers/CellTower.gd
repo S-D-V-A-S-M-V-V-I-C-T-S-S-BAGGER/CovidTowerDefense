@@ -5,7 +5,7 @@ extends Node2D
 # var a: int = 2
 # var b: String = "text"
 
-func initialize(tower_position, path_position):
+func initialize(tower_position, _path_position):
 	position = tower_position
 
 
