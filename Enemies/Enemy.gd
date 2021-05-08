@@ -3,7 +3,7 @@ class_name Enemy
 
 
 enum State { CREATED, SPAWNED, ALIVE, DEAD }
-enum Upgrades {}
+enum Upgrades { NONE, SJAALTJE, IMPROV, MONDKAPJE, MEDISCH_KAPJE }
 
 export(NodePath) var path
 
@@ -75,7 +75,7 @@ func _process(delta: float) -> void:
 	
 	# Otherwise, continue
 	var cur_speed = base_speed * speed;
-	$Path/MovingPoint/AnimatedSprite.speed_scale = cur_speed
+	$Path/MovingPoint/AnimatedSprite.speed_scale = speed
 	get_node("Path/MovingPoint").offset += cur_speed * delta
 
 

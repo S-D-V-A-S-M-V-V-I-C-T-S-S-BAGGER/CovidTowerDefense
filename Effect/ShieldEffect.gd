@@ -2,11 +2,13 @@ extends Effect
 class_name ShieldEffect
 
 
+var initial: float
 var shield: float
 
 
 func _init(enemy: Enemy, duration: float, shield: float).(enemy, duration) -> void:
 	self.shield = shield
+	self.initial = shield
 
 
 func on_damage(amount: float) -> float:

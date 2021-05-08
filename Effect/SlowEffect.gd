@@ -10,4 +10,4 @@ func _init(enemy: Enemy, duration: float, amount: float).(enemy, duration) -> vo
 
 
 func tick(delta: float):
-	self.enemy.speed_modifier *= (1.0 - amount)
+	self.enemy.speed *= (1.0 - amount)
