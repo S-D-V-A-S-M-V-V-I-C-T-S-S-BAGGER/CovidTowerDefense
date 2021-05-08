@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Videos/IA_intro.webm" type="VideoStream" id=1]
+[ext_resource path="res://Videos/IA SPORTS BIG.webm" type="VideoStream" id=1]
 [ext_resource path="res://Menus/SplashScreen/VideoPlayer.gd" type="Script" id=2]
 [ext_resource path="res://Menus/MainMenu/MainMenu.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Videos/Flash3.webm" type="VideoStream" id=4]
