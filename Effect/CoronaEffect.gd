@@ -5,6 +5,8 @@ class_name CoronaEffect
 var damage: float
 var infectious: float
 
+var particle_scene: PackedScene = load("res://Enemies/CoronaParticle.tscn")
+
 
 func _init(enemy: Enemy, duration: float, damage: float, infectious: float).(enemy, duration) -> void:
 	self.damage = damage
@@ -24,7 +26,11 @@ func on_damage(amount: float) -> float:
 	var spread = randf() < self.infectious
 	if spread:
 		# TODO: Implement spreading corona
-		push_warning("Corona spread effect not implemented yet (see CoronaEffect.gd:23)")
+		var particle = particle_scene.instance()
+		var enemy_position = enemy.get_node("Path/MovingPoint").position
+		particle.position = enemy_position
+		var enemy_parent = enemy.get_parent()
+		enemy_parent.add_child(particle)
 	
 	return amount
 

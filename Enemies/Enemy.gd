@@ -55,7 +55,8 @@ func _process(delta: float) -> void:
 	speed = 1.0
 	
 	if is_infected():
-		push_warning("CORONA, WE GAAN DOOD")
+		#push_warning("CORONA, WE GAAN DOOD")
+		pass
 	
 	# Process all effects
 	var expired = []

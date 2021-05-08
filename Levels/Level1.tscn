@@ -107,8 +107,11 @@ position = Vector2( 336, 208 )
 [node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer3" index="2"]
 position = Vector2( 32, 0 )
 
-[node name="Bank" parent="CanvasLayer/HUD/SideBar" index="0"]
-money = 10
+[node name="VBoxContainer" parent="CanvasLayer/HUD/SideBar/TowerPreview" index="0"]
+margin_bottom = 144.0
+
+[node name="TowerDescription" parent="CanvasLayer/HUD/SideBar/TowerPreview/VBoxContainer" index="2"]
+margin_bottom = 144.0
 
 [node name="EndScreen" type="ColorRect" parent="CanvasLayer"]
 visible = false
