@@ -14,10 +14,12 @@ export (PackedScene) var nerts_tower
 export (int) var nerts_tower_cost = 10
 
 var bank : Node
+var position_selector : Node 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	bank = owner.get_node("SideBar/Bank")
+	position_selector = owner.get_node("TowerPositions")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,8 +27,9 @@ func _ready():
 #	pass
 
 func place_tower(tower_scene:PackedScene, cost:int) -> void:
-	var selected_position = owner.get_node("TowerPositions").consume_position()
+	var selected_position = position_selector.active_position
 	if selected_position and bank.pay(cost):
+		position_selector.deselect_position()
 		var tower = tower_scene.instance()
 		var tower_position = selected_position.position
 		var path_position = selected_position.get_node("PathPosition").position

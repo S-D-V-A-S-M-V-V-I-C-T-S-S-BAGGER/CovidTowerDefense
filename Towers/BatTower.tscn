@@ -57,6 +57,7 @@ extents = Vector2( 16, 16 )
 
 [node name="BatTower" type="Node2D"]
 script = ExtResource( 1 )
+time_between_bats = 7.0
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 3 )

@@ -24,8 +24,3 @@ func select_position(new_position : Node) -> void:
 
 func deselect_position() -> void:
 	active_position = null
-
-func consume_position() -> Node:
-	var position = active_position
-	deselect_position()
-	return position
