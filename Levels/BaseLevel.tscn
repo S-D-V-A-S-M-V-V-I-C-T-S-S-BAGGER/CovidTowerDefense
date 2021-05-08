@@ -72,3 +72,4 @@ position = Vector2( 423.898, 460.764 )
 
 [editable path="HUD"]
 [editable path="HUD/TowerPositions/TowerPlacer"]
+[editable path="HUD/TowerPositions/TowerPlacer2"]
