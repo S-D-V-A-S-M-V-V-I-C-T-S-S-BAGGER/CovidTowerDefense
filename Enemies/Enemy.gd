@@ -4,8 +4,6 @@ class_name Enemy
 
 enum State { CREATED, SPAWNED, ALIVE, DEAD }
 
-export(NodePath) var path
-
 
 # ##
 # # STATS
@@ -23,16 +21,24 @@ var effects = []
 var shield = null
 var state = State.CREATED
 
+var level : Level
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if path:
-		get_node("Path").curve = get_node(path).curve
 	
 	health = base_health
 	
 	on_spawn()
 	state = State.SPAWNED
+
+
+func initialize(curve : Curve2D) -> void:
+	$Path.curve = curve
+	
+	level = owner
+	
+	level.enemies_spawned += 1
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -90,6 +96,8 @@ func die():
 	if state == State.DEAD:
 		return
 	
+	level.enemies_killed += 1
+	
 	$Path/MovingPoint/Area2D/Collision.disabled = true
 	$Path/MovingPoint/AnimatedSprite.speed_scale = 1.0
 	$Path/MovingPoint/AnimatedSprite.play("death")
@@ -98,11 +106,14 @@ func die():
 
 
 func finish():
+	level.enemies_arrived += 1
+	
 	on_finish()
 	state == State.FINISHED
 	
 	# Prepare for deletion
 	$Path/MovingPoint/Area2D/Collision.disabled = true
+	queue_free()
 	
 
 
