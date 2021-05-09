@@ -106,11 +106,10 @@ func die():
 	
 	level.enemies_killed += 1
 
-	$Path/MovingPoint/Area2D/Collision.disabled = true
-	$Path/MovingPoint/AnimatedSprite.speed_scale = 1.0
-	$Path/MovingPoint/AnimatedSprite.play("death")
 	on_die()
 	state = State.DEAD
+	
+	queue_free()
 
 
 func finish():
