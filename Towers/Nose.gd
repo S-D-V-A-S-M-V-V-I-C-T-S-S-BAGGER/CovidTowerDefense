@@ -16,6 +16,9 @@ export var snot_timer := 0.0
 func initialize(tower_position, path_position):
 	position = tower_position
 	$Snot.position = path_position
+	var particle_origin = $Particles2D.position
+	var angle = particle_origin.angle_to(path_position)
+	$Particles2D.rotate(angle)
 
 
 # Called when the node enters the scene tree for the first time.

@@ -29,11 +29,15 @@ func do_vaccinate():
 
 
 func _on_Healing_area_entered(area: Area2D) -> void:
-	var enemy : Enemy = area.owner
+	var enemy = area.owner
 	if !in_range.has(enemy):
 		in_range.append(enemy)
 
 
 func _on_Healing_area_exited(area: Area2D) -> void:
-	var enemy : Enemy = area.owner
+	var enemy = area.owner
 	in_range.erase(enemy)
+
+
+func on_die():
+	$Path/MovingPoint/Healing/CollisionShape.disabled = true
