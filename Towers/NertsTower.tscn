@@ -29,6 +29,7 @@ curve = SubResource( 1 )
 texture = ExtResource( 3 )
 
 [node name="Nerts" type="Area2D" parent="Path2D/MovingPoint"]
+collision_layer = 2
 
 [node name="Collision" type="CollisionShape2D" parent="Path2D/MovingPoint/Nerts"]
 shape = SubResource( 2 )
