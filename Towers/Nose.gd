@@ -5,7 +5,7 @@ extends Node2D
 # Declare member variables here. Examples:
 # var a: int = 2
 # var b: String = "text"
-export(int) var max_snot_count = 3
+export(int) var max_snot_count = 1
 export(float) var time_between_snots = 3.0
 
 
@@ -41,14 +41,8 @@ func set_snot_animation():
 	match snot_count:
 		0:
 			$Snot/AnimatedSprite.play("zero")
-		1:
-			$Snot/AnimatedSprite.play("one")
-		2:
-			$Snot/AnimatedSprite.play("two")
-		3:
-			$Snot/AnimatedSprite.play("three")
 		_:
-			$Snot/AnimatedSprite.play("many")
+			$Snot/AnimatedSprite.play("one")
 
 
 func _on_Snot_area_entered(area: Area2D) -> void:
