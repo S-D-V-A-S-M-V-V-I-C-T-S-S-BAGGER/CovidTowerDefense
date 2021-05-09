@@ -25,7 +25,6 @@ func tick(delta: float):
 func on_damage(amount: float) -> float:
 	var spread = randf() < self.infectious
 	if spread:
-		# TODO: Implement spreading corona
 		var particle = particle_scene.instance()
 		var enemy_position = enemy.get_node("Path/MovingPoint").position
 		particle.position = enemy_position

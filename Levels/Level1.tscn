@@ -87,6 +87,8 @@ enemy_parent_path = NodePath("../Enemies")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource( 8 )]
+spawner_path = NodePath("../../Spawner")
+enemy_parent_path = NodePath("../../Enemies")
 
 [node name="TowerPlacer" parent="CanvasLayer/HUD/TowerPositions" index="0" instance=ExtResource( 9 )]
 position = Vector2( 336, 80 )
