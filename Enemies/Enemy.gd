@@ -24,6 +24,7 @@ var state = State.CREATED
 
 var level : Level
 
+var death_squirt : PackedScene = load("res://Enemies/DeathSquirt.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -105,6 +106,10 @@ func die():
 		return
 	
 	level.enemies_killed += 1
+	
+	var squirt = death_squirt.instance()
+	get_parent().add_child(squirt)
+	squirt.global_position = $Path/MovingPoint.global_position
 
 	on_die()
 	state = State.DEAD
