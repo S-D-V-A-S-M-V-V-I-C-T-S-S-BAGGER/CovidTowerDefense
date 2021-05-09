@@ -26,8 +26,17 @@ scale_curve = SubResource( 2 )
 
 [node name="Node2D" type="Node2D"]
 
+[node name="Panel" type="Panel" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Particles2D" type="Particles2D" parent="."]
 amount = 32
+lifetime = 2.0
 explosiveness = 0.87
+local_coords = false
 process_material = SubResource( 3 )
 texture = ExtResource( 1 )
