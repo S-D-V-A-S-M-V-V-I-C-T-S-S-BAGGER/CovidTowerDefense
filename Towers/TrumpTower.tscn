@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://PlaceHolders/TowerPlaceholder.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/trump/trump_1.png" type="Texture" id=1]
 [ext_resource path="res://Towers/TrumpTower.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
