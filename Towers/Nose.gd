@@ -12,13 +12,13 @@ export(float) var time_between_snots = 3.0
 export var snot_count := 1
 export var snot_timer := 0.0
 
-
 func initialize(tower_position, path_position):
 	position = tower_position
 	$Snot.position = path_position
 	var particle_origin = $Particles2D.position
 	
-	var emitter_material : ParticlesMaterial = $Particles2D.process_material
+	var emitter_material : ParticlesMaterial = $Particles2D.process_material.duplicate()
+	$Particles2D.process_material = emitter_material
 	
 	# Point sneeze to path
 	var direction : Vector2 = particle_origin.direction_to(path_position)
