@@ -15,8 +15,8 @@ func show(index: int):
 func show_video(index: int):
 	var enemy_name = self.enemy_names[current_index]
 	var video = VideoStreamWebm.new()
-	video.set_file("res://videos/Enemies/" + enemy_name + ".webm")
-	$TextureRect.visible = false
+	video.set_file("res://Videos/Enemies/" + enemy_name + ".webm")
+	$MarginContainer2/TextureRect.visible = false
 	$VideoPlayer.set_stream(video)
 	$VideoPlayer.play()
 
@@ -35,9 +35,9 @@ func _on_VideoPlayer_finished():
 	$VideoPlayer.stop()
 	# Show the picture of this same enemy.
 	var enemy_name = self.enemy_names[current_index]
-	var texture = load("res://videos/Enemies/" + enemy_name + ".png")
-	$TextureRect.texture = texture
-	$TextureRect.visible = true
+	var texture = load("res://Videos/Enemies/" + enemy_name + ".png")
+	$MarginContainer2/TextureRect.texture = texture
+	$MarginContainer2/TextureRect.visible = true
 
 
 func _on_CloseButton_pressed():

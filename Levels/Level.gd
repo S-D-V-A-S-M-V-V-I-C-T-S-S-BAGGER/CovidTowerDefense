@@ -19,7 +19,7 @@ var spawner_done : bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# To show a new enemy: 
-	# $CanvasLayer/NewEnemy.show(0)
+	$CanvasLayer/NewEnemy.show(0)
 	money = starting_money
 
 
