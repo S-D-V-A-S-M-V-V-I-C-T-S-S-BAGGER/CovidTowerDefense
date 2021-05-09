@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Enemies/VaccineEnemy.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/schaap/schaap_1.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://PlaceHolders/schaap_death_1.png" type="Texture" id=4]
 [ext_resource path="res://PlaceHolders/schaap_death_0.png" type="Texture" id=5]
 [ext_resource path="res://PlaceHolders/schaap_death_2.png" type="Texture" id=6]
+[ext_resource path="res://Enemies/AudioStreamPlayer.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )
@@ -36,10 +37,10 @@ curve = null
 rotate = false
 loop = false
 
-[node name="Collision" type="Area2D" parent="Path/MovingPoint"]
+[node name="Area2D" type="Area2D" parent="Path/MovingPoint"]
 collision_mask = 0
 
-[node name="CollisionShape" type="CollisionShape2D" parent="Path/MovingPoint/Collision"]
+[node name="Collision" type="CollisionShape2D" parent="Path/MovingPoint/Area2D"]
 self_modulate = Color( 1, 0, 0, 1 )
 shape = SubResource( 1 )
 
@@ -53,7 +54,11 @@ shape = SubResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Path/MovingPoint"]
 position = Vector2( 0.0853119, -0.0853195 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
+
+[node name="CoughPlayer" type="AudioStreamPlayer2D" parent="."]
+script = ExtResource( 7 )
 
 [connection signal="area_entered" from="Path/MovingPoint/Healing" to="." method="_on_Healing_area_entered"]
 [connection signal="area_exited" from="Path/MovingPoint/Healing" to="." method="_on_Healing_area_exited"]
