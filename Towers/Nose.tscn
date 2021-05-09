@@ -1,68 +1,33 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Towers/Nose.gd" type="Script" id=1]
-[ext_resource path="res://PlaceHolders/BatsPlaceholder.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/snot.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/jodenneus.png" type="Texture" id=3]
 [ext_resource path="res://PlaceHolders/Snot.png" type="Texture" id=4]
 
-[sub_resource type="AtlasTexture" id=11]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 64, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=12]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 96, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=13]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 32, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=14]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 32, 32 )
-
-[sub_resource type="SpriteFrames" id=15]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ SubResource( 11 ) ],
+"frames": [ ExtResource( 2 ) ],
 "loop": true,
-"name": "three",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 12 ) ],
-"loop": true,
-"name": "many",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 13 ) ],
-"loop": true,
-"name": "two",
+"name": "one",
 "speed": 5.0
 }, {
 "frames": [  ],
 "loop": true,
 "name": "zero",
 "speed": 5.0
-}, {
-"frames": [ SubResource( 14 ) ],
-"loop": true,
-"name": "one",
-"speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=16]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 16, 16 )
 
-[sub_resource type="Curve" id=9]
+[sub_resource type="Curve" id=3]
 _data = [ Vector2( 0, 0.528409 ), 0.0, 0.0, 0, 0, Vector2( 0.0263158, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.776316, 0.986364 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), -2.60661, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=2]
-curve = SubResource( 9 )
+[sub_resource type="CurveTexture" id=4]
+curve = SubResource( 3 )
 
-[sub_resource type="ParticlesMaterial" id=10]
+[sub_resource type="ParticlesMaterial" id=5]
 lifetime_randomness = 0.28
 emission_shape = 2
 emission_box_extents = Vector3( 5, 0, 0 )
@@ -76,7 +41,7 @@ orbit_velocity_random = 0.0
 damping = 1600.0
 angle = 360.0
 angle_random = 1.0
-scale_curve = SubResource( 2 )
+scale_curve = SubResource( 4 )
 
 [node name="Nose" type="Node2D"]
 script = ExtResource( 1 )
@@ -91,11 +56,11 @@ position = Vector2( 0, 32 )
 collision_layer = 2
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Snot"]
-frames = SubResource( 15 )
+frames = SubResource( 1 )
 animation = "zero"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Snot"]
-shape = SubResource( 16 )
+shape = SubResource( 2 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
 position = Vector2( -1, 10 )
@@ -105,7 +70,7 @@ lifetime = 2.0
 one_shot = true
 explosiveness = 0.87
 local_coords = false
-process_material = SubResource( 10 )
+process_material = SubResource( 5 )
 texture = ExtResource( 4 )
 
 [connection signal="area_entered" from="Snot" to="." method="_on_Snot_area_entered"]
