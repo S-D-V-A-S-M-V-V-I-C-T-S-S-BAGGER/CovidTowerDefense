@@ -36,20 +36,20 @@ func _ready() -> void:
 	set_snot_animation()
 	$Particles2D.set_one_shot(true)
 	$Particles2D.set_emitting(true)
+	snot_timer = time_between_snots
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if snot_timer < time_between_snots:
-		# Increase the timer
-		snot_timer += delta
-	else:
 		if snot_count < max_snot_count:
-			# Add a snot
-			snot_count += 1
-			set_snot_animation()
-			$Particles2D.set_emitting(true)
-			snot_timer = 0.0
+			if snot_timer <= 0:
+				# Add a snot
+				snot_count += 1
+				set_snot_animation()
+				$Particles2D.set_emitting(true)
+				snot_timer = time_between_snots
+			
+			snot_timer -= delta
 
 
 func set_snot_animation():
