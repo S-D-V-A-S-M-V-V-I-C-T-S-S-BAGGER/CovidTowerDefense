@@ -291,24 +291,23 @@ nose_tower_name = "Nose"
 nose_tower_description = "Spreads COVID on the floor, infecting and slowing enemies"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="SideBar/TowerPreview"]
-margin_left = 3.0
-margin_right = 125.0
-margin_bottom = 207.0
+margin_right = 128.0
+margin_bottom = 144.0
 size_flags_vertical = 3
 
 [node name="CenterContainer" type="CenterContainer" parent="SideBar/TowerPreview/VBoxContainer"]
-margin_right = 122.0
+margin_right = 128.0
 margin_bottom = 32.0
 
 [node name="TextureRect" type="TextureRect" parent="SideBar/TowerPreview/VBoxContainer/CenterContainer"]
-margin_left = 45.0
-margin_right = 77.0
+margin_left = 48.0
+margin_right = 80.0
 margin_bottom = 32.0
 texture = ExtResource( 10 )
 
 [node name="TowerName" type="Label" parent="SideBar/TowerPreview/VBoxContainer"]
 margin_top = 36.0
-margin_right = 122.0
+margin_right = 128.0
 margin_bottom = 59.0
 custom_fonts/font = SubResource( 1 )
 text = "Tower Name"
@@ -317,8 +316,8 @@ clip_text = true
 
 [node name="TowerDescription" type="Label" parent="SideBar/TowerPreview/VBoxContainer"]
 margin_top = 63.0
-margin_right = 122.0
-margin_bottom = 207.0
+margin_right = 128.0
+margin_bottom = 144.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
 text = "a short description of how this tower works"
@@ -337,6 +336,7 @@ autowrap = true
 [connection signal="pressed" from="SideBar/TowerOptions/LidlTower" to="SideBar/TowerOptions" method="_on_LidlTower_pressed"]
 [connection signal="mouse_entered" from="SideBar/TowerOptions/NertsTower" to="SideBar/TowerPreview" method="_on_NertsTower_mouse_entered"]
 [connection signal="pressed" from="SideBar/TowerOptions/NertsTower" to="SideBar/TowerOptions" method="_on_NertsTower_pressed"]
+[connection signal="mouse_entered" from="SideBar/TowerOptions/InternetTower" to="SideBar/TowerPreview" method="_on_InternetTower_mouse_entered"]
 [connection signal="pressed" from="SideBar/TowerOptions/InternetTower" to="SideBar/TowerOptions" method="_on_InternetTower_pressed"]
 [connection signal="mouse_entered" from="SideBar/TowerOptions/Nose" to="SideBar/TowerPreview" method="_on_Nose_mouse_entered"]
 [connection signal="pressed" from="SideBar/TowerOptions/Nose" to="SideBar/TowerOptions" method="_on_Nose_pressed"]
