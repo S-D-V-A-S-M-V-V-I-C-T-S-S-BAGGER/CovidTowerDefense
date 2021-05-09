@@ -1,21 +1,26 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://PlaceHolders/TowerPlaceholder.png" type="Texture" id=1]
-[ext_resource path="res://Towers/Tower.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/router.png" type="Texture" id=1]
+[ext_resource path="res://Towers/CellTower.gd" type="Script" id=2]
+[ext_resource path="res://Towers/InternetTower.gd" type="Script" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 64.0
 
-[node name="Tower" type="Node2D"]
+[node name="InternetTower" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 2.16961e-05, 0.00518367 )
+scale = Vector2( 0.368486, 0.366224 )
 texture = ExtResource( 1 )
+script = ExtResource( 3 )
 
 [node name="Collision" type="Area2D" parent="."]
 collision_layer = 2
 
 [node name="AreaOffEffect" type="CollisionShape2D" parent="Collision"]
+position = Vector2( 0, -0.0834293 )
 shape = SubResource( 1 )
 
 [connection signal="area_shape_entered" from="Collision" to="." method="_on_Collision_area_shape_entered"]
