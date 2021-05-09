@@ -60,7 +60,6 @@ curve = ExtResource( 4 )
 [node name="SpawnPoint" parent="." instance=ExtResource( 10 )]
 position = Vector2( 179.605, 168.291 )
 path = NodePath("../Path")
-wave_parent = NodePath("../Waves")
 
 [node name="HUD" parent="." instance=ExtResource( 8 )]
 
@@ -70,47 +69,61 @@ position = Vector2( 698.605, 67.1359 )
 [node name="TowerPlacer2" parent="HUD/TowerPositions" index="1" instance=ExtResource( 9 )]
 position = Vector2( 423.898, 460.764 )
 
-[node name="BatTower" parent="HUD/SideBar/TowerOptions" index="0"]
-margin_top = 156.0
-margin_bottom = 176.0
+[node name="TowerOptions" parent="HUD/SideBar" index="5"]
+margin_bottom = 436.0
 
-[node name="SlowTower" parent="HUD/SideBar/TowerOptions" index="1"]
-margin_top = 180.0
-margin_bottom = 200.0
+[node name="BatTower" parent="HUD/SideBar/TowerOptions" index="0"]
+margin_top = 0.0
+margin_bottom = 20.0
+
+[node name="Trump" parent="HUD/SideBar/TowerOptions" index="1"]
+margin_top = 24.0
+margin_bottom = 44.0
 
 [node name="CellTower" parent="HUD/SideBar/TowerOptions" index="2"]
-margin_top = 204.0
-margin_bottom = 224.0
+margin_top = 48.0
+margin_bottom = 68.0
 
 [node name="LidlTower" type="Button" parent="HUD/SideBar/TowerOptions" index="3"]
-margin_top = 228.0
+margin_top = 72.0
 margin_right = 128.0
-margin_bottom = 248.0
+margin_bottom = 92.0
 text = "Lidl"
 
 [node name="FastfoodTower" type="Button" parent="HUD/SideBar/TowerOptions" index="4"]
-margin_top = 252.0
+margin_top = 96.0
 margin_right = 128.0
-margin_bottom = 272.0
+margin_bottom = 116.0
 text = "Fast-food"
 
 [node name="NertsTower" type="Button" parent="HUD/SideBar/TowerOptions" index="5"]
-margin_top = 276.0
+margin_top = 120.0
 margin_right = 128.0
-margin_bottom = 296.0
+margin_bottom = 140.0
 text = "Nertsen"
 
 [node name="FastfoodTower" parent="HUD/SideBar/TowerOptions" index="6"]
-margin_top = 300.0
-margin_bottom = 320.0
+margin_top = 144.0
+margin_bottom = 164.0
 
 [node name="LidlTower" parent="HUD/SideBar/TowerOptions" index="7"]
-margin_top = 324.0
-margin_bottom = 344.0
+margin_top = 168.0
+margin_bottom = 188.0
 
 [node name="NertsTower" parent="HUD/SideBar/TowerOptions" index="8"]
-margin_top = 348.0
-margin_bottom = 368.0
+margin_top = 192.0
+margin_bottom = 212.0
+
+[node name="InternetTower" parent="HUD/SideBar/TowerOptions" index="9"]
+margin_top = 216.0
+margin_bottom = 236.0
+
+[node name="Nose" parent="HUD/SideBar/TowerOptions" index="10"]
+margin_top = 240.0
+margin_bottom = 260.0
+
+[node name="TowerPreview" parent="HUD/SideBar" index="6"]
+margin_top = 440.0
 
 [editable path="HUD"]
 [editable path="HUD/TowerPositions/TowerPlacer"]

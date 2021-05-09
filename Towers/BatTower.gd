@@ -55,5 +55,5 @@ func _on_Bat_area_entered(area: Area2D) -> void:
 		bat_count -= 1
 		set_bat_animation()
 		
-		var enemy = get_node(area.get_path()).get_parent().get_parent().get_parent()
+		var enemy = area.owner
 		enemy.damage(50)

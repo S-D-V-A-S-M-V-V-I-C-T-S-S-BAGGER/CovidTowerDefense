@@ -1,0 +1,253 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://PlaceHolders/PlaceHolderTile.png" type="Texture" id=1]
+[ext_resource path="res://PlaceHolders/Background.png" type="Texture" id=2]
+[ext_resource path="res://Enemies/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Levels/Level.gd" type="Script" id=4]
+[ext_resource path="res://Sprites/MilasianCircaBoldPERSONAL.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Sprites/Trueno-wml2.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://Videos/IA_intro.webm" type="VideoStream" id=7]
+[ext_resource path="res://Gui/HUD.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Gui/TowerPlacer.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Levels/Waves/Spawner.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Levels/Waves/Wave.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Levels/NewEnemy.gd" type="Script" id=12]
+[ext_resource path="res://Videos/Enemies/oudje.png" type="Texture" id=13]
+
+[sub_resource type="TileSet" id=1]
+0/name = "PlaceHolderTile.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="Curve2D" id=2]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 68.8609, 47.4736, 0, 0, 0, 0, 363.017, 51.7162, 0, 0, 0, 0, 364.431, 113.942, 0, 0, 0, 0, 174.927, 113.942, 0, 0, 0, 0, 172.098, 177.581, 0, 0, 0, 0, 367.26, 177.581, 0, 0, 0, 0, 365.846, 238.392, 0, 0, 0, 0, 176.341, 241.221, 0, 0, 0, 0, 173.513, 434.968 )
+}
+
+[sub_resource type="DynamicFont" id=3]
+size = 80
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 24
+use_filter = true
+font_data = ExtResource( 6 )
+
+[node name="LevelTemplate" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Waves" type="Node" parent="."]
+
+[node name="Wave1" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 5.0
+time_before_start = 10.0
+
+[node name="BackGround" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 16, 0, 0, 19, 0, 0, 65536, 0, 0, 65552, 0, 0, 65555, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131088, 0, 0, 131091, 0, 0, 196622, 0, 0, 196623, 0, 0, 196624, 0, 0, 196627, 0, 0, 196628, 0, 0, 196629, 0, 0, 262158, 0, 0, 262165, 0, 0, 327694, 0, 0, 327696, 0, 0, 327697, 0, 0, 327698, 0, 0, 327699, 0, 0, 327701, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393232, 0, 0, 393235, 0, 0, 393237, 0, 0, 393238, 0, 0, 393239, 0, 0, 393240, 0, 0, 393241, 0, 0, 393242, 0, 0, 393243, 0, 0, 393244, 0, 0, 393245, 0, 0, 393246, 0, 0, 393247, 0, 0, 458756, 0, 0, 458768, 0, 0, 458771, 0, 0, 458783, 0, 0, 524292, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 524307, 0, 0, 524308, 0, 0, 524309, 0, 0, 524310, 0, 0, 524311, 0, 0, 524312, 0, 0, 524313, 0, 0, 524314, 0, 0, 524315, 0, 0, 524316, 0, 0, 524317, 0, 0, 524319, 0, 0, 589828, 0, 0, 589836, 0, 0, 589847, 0, 0, 589855, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655372, 0, 0, 655383, 0, 0, 655385, 0, 0, 655386, 0, 0, 655387, 0, 0, 655388, 0, 0, 655389, 0, 0, 655390, 0, 0, 655391, 0, 0, 720906, 0, 0, 720908, 0, 0, 720919, 0, 0, 720921, 0, 0, 786442, 0, 0, 786444, 0, 0, 786445, 0, 0, 786446, 0, 0, 786447, 0, 0, 786452, 0, 0, 786453, 0, 0, 786454, 0, 0, 786455, 0, 0, 786457, 0, 0, 851978, 0, 0, 851983, 0, 0, 851988, 0, 0, 851993, 0, 0, 917514, 0, 0, 917515, 0, 0, 917516, 0, 0, 917517, 0, 0, 917519, 0, 0, 917524, 0, 0, 917526, 0, 0, 917527, 0, 0, 917528, 0, 0, 917529, 0, 0, 983053, 0, 0, 983055, 0, 0, 983056, 0, 0, 983059, 0, 0, 983060, 0, 0, 983062, 0, 0, 1048589, 0, 0, 1048592, 0, 0, 1048593, 0, 0, 1048594, 0, 0, 1048595, 0, 0, 1048598, 0, 0, 1114125, 0, 0, 1114126, 0, 0, 1114133, 0, 0, 1114134, 0, 0, 1179662, 0, 0, 1179663, 0, 0, 1179664, 0, 0, 1179665, 0, 0, 1179666, 0, 0, 1179667, 0, 0, 1179668, 0, 0, 1179669, 0, 0 )
+
+[node name="Path" type="Path2D" parent="."]
+curve = SubResource( 2 )
+
+[node name="Spawner" parent="." instance=ExtResource( 10 )]
+position = Vector2( 142.835, 48.0829 )
+path = NodePath("../Path")
+wave_parent_path = NodePath("../Waves")
+enemy_parent_path = NodePath("../Enemies")
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource( 8 )]
+spawner_path = NodePath("../../Spawner")
+enemy_parent_path = NodePath("../../Enemies")
+
+[node name="TowerPlacer" parent="CanvasLayer/HUD/TowerPositions" index="0" instance=ExtResource( 9 )]
+position = Vector2( 336, 80 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer" index="2"]
+position = Vector2( 32, 0 )
+
+[node name="TowerPlacer2" parent="CanvasLayer/HUD/TowerPositions" index="1" instance=ExtResource( 9 )]
+position = Vector2( 208, 144 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer2" index="2"]
+position = Vector2( -32, 0 )
+
+[node name="TowerPlacer3" parent="CanvasLayer/HUD/TowerPositions" index="2" instance=ExtResource( 9 )]
+position = Vector2( 336, 208 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer3" index="2"]
+position = Vector2( 32, 0 )
+
+[node name="EndScreen" type="ColorRect" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.376471, 0.376471, 0.376471, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/EndScreen"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/EndScreen/CenterContainer"]
+margin_left = 301.0
+margin_top = 221.0
+margin_right = 723.0
+margin_bottom = 379.0
+
+[node name="FinishedLabel" type="Label" parent="CanvasLayer/EndScreen/CenterContainer/VBoxContainer"]
+margin_right = 422.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 3 )
+text = "Level Finished!"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/EndScreen/CenterContainer/VBoxContainer"]
+margin_top = 84.0
+margin_right = 422.0
+margin_bottom = 114.0
+alignment = 1
+
+[node name="FinalScoreLabel" type="Label" parent="CanvasLayer/EndScreen/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 132.0
+margin_right = 268.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 4 )
+text = "Final Score:"
+
+[node name="FinalScoreValueLabel" type="Label" parent="CanvasLayer/EndScreen/CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 272.0
+margin_right = 289.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 4 )
+text = "0"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/EndScreen/CenterContainer/VBoxContainer"]
+margin_top = 118.0
+margin_right = 422.0
+margin_bottom = 158.0
+custom_constants/margin_right = 80
+custom_constants/margin_top = 20
+custom_constants/margin_left = 80
+
+[node name="MenuButton" type="Button" parent="CanvasLayer/EndScreen/CenterContainer/VBoxContainer/MarginContainer"]
+margin_left = 80.0
+margin_top = 20.0
+margin_right = 342.0
+margin_bottom = 40.0
+text = "Return to Menu"
+
+[node name="NewEnemy" type="ColorRect" parent="CanvasLayer"]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.376471, 0.376471, 0.376471, 1 )
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+enemy_names = [ "oudje", "sheep", "wappie", "student", "hazmat", "ggd", "doctor" ]
+
+[node name="FinishedLabel" type="Label" parent="CanvasLayer/NewEnemy"]
+margin_top = 12.0467
+margin_right = 1023.0
+margin_bottom = 92.0467
+custom_fonts/font = SubResource( 3 )
+text = "New Enemy!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VideoPlayer" type="VideoPlayer" parent="CanvasLayer/NewEnemy"]
+margin_left = 80.0
+margin_top = 104.0
+margin_right = 943.0
+margin_bottom = 554.0
+stream = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/NewEnemy"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 80
+custom_constants/margin_top = 100
+custom_constants/margin_left = 80
+custom_constants/margin_bottom = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/NewEnemy/MarginContainer2"]
+margin_left = 80.0
+margin_top = 100.0
+margin_right = 944.0
+margin_bottom = 550.0
+texture = ExtResource( 13 )
+expand = true
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/NewEnemy"]
+margin_top = 549.573
+margin_right = 1023.0
+margin_bottom = 589.573
+custom_constants/margin_right = 80
+custom_constants/margin_top = 20
+custom_constants/margin_left = 80
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseButton" type="Button" parent="CanvasLayer/NewEnemy/MarginContainer"]
+margin_left = 80.0
+margin_top = 20.0
+margin_right = 943.0
+margin_bottom = 40.0
+text = "Continue"
+
+[connection signal="pressed" from="CanvasLayer/EndScreen/CenterContainer/VBoxContainer/MarginContainer/MenuButton" to="." method="_on_MenuButton_pressed"]
+[connection signal="finished" from="CanvasLayer/NewEnemy/VideoPlayer" to="CanvasLayer/NewEnemy" method="_on_VideoPlayer_finished"]
+[connection signal="pressed" from="CanvasLayer/NewEnemy/MarginContainer/CloseButton" to="CanvasLayer/NewEnemy" method="_on_CloseButton_pressed"]
+
+[editable path="CanvasLayer/HUD"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer2"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer3"]

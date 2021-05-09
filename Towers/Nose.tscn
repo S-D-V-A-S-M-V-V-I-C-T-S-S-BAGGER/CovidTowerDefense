@@ -5,39 +5,39 @@
 [ext_resource path="res://Sprites/jodenneus.png" type="Texture" id=3]
 [ext_resource path="res://PlaceHolders/Snot.png" type="Texture" id=4]
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=11]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 64, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=12]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 96, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=13]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 32, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=14]
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 32, 32 )
 
-[sub_resource type="SpriteFrames" id=7]
+[sub_resource type="SpriteFrames" id=15]
 animations = [ {
-"frames": [ SubResource( 3 ) ],
+"frames": [ SubResource( 11 ) ],
 "loop": true,
 "name": "three",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 4 ) ],
+"frames": [ SubResource( 12 ) ],
 "loop": true,
 "name": "many",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 5 ) ],
+"frames": [ SubResource( 13 ) ],
 "loop": true,
 "name": "two",
 "speed": 5.0
@@ -47,13 +47,13 @@ animations = [ {
 "name": "zero",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 6 ) ],
+"frames": [ SubResource( 14 ) ],
 "loop": true,
 "name": "one",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=16]
 extents = Vector2( 16, 16 )
 
 [sub_resource type="Curve" id=9]
@@ -88,13 +88,14 @@ texture = ExtResource( 3 )
 
 [node name="Snot" type="Area2D" parent="."]
 position = Vector2( 0, 32 )
+collision_layer = 2
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Snot"]
-frames = SubResource( 7 )
+frames = SubResource( 15 )
 animation = "zero"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Snot"]
-shape = SubResource( 8 )
+shape = SubResource( 16 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
 position = Vector2( -1, 10 )
