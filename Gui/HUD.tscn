@@ -198,57 +198,58 @@ internet_tower = ExtResource( 21 )
 nose_tower = ExtResource( 23 )
 
 [node name="BatTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 11.0
+margin_top = 23.0
 margin_right = 128.0
-margin_bottom = 31.0
+margin_bottom = 43.0
 text = "Bat"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Trump" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 35.0
+margin_top = 47.0
 margin_right = 128.0
-margin_bottom = 55.0
+margin_bottom = 67.0
 text = "Donald J. Trump"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CellTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 59.0
+margin_top = 71.0
 margin_right = 128.0
-margin_bottom = 79.0
+margin_bottom = 91.0
 text = "5G"
 
 [node name="FastfoodTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 83.0
+margin_top = 95.0
 margin_right = 128.0
-margin_bottom = 103.0
+margin_bottom = 115.0
 text = "Fast-food"
 
 [node name="LidlTower" type="Button" parent="SideBar/TowerOptions"]
+visible = false
 margin_top = 107.0
 margin_right = 128.0
 margin_bottom = 127.0
 text = "Lidl"
 
 [node name="NertsTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 131.0
+margin_top = 119.0
 margin_right = 128.0
-margin_bottom = 151.0
+margin_bottom = 139.0
 text = "Nertsen"
 
 [node name="InternetTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 155.0
+margin_top = 143.0
 margin_right = 128.0
-margin_bottom = 175.0
+margin_bottom = 163.0
 text = "Router"
 
 [node name="Nose" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 179.0
+margin_top = 167.0
 margin_right = 128.0
-margin_bottom = 199.0
+margin_bottom = 187.0
 text = "Nose"
 
 [node name="TowerPreview" type="AspectRatioContainer" parent="SideBar"]
