@@ -812,6 +812,9 @@ position = Vector2( 335.235, 176 )
 [node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer3" index="2"]
 position = Vector2( -3.05176e-05, -32 )
 
+[node name="TowerOptions" parent="CanvasLayer/HUD/SideBar" index="5"]
+nerts_path = NodePath("../../../../Path")
+
 [node name="EndScreen" type="ColorRect" parent="CanvasLayer"]
 visible = false
 anchor_right = 1.0
