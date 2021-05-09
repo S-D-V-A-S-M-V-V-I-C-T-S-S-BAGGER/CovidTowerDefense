@@ -17,13 +17,25 @@ func initialize(tower_position, path_position):
 	position = tower_position
 	$Snot.position = path_position
 	var particle_origin = $Particles2D.position
-	var angle = particle_origin.angle_to(path_position)
-	$Particles2D.rotate(angle)
+	
+	var emitter_material : ParticlesMaterial = $Particles2D.process_material
+	
+	# Point sneeze to path
+	var direction : Vector2 = particle_origin.direction_to(path_position)
+	emitter_material.direction = Vector3(direction.x, direction.y, 0.0)
+	
+	# Scale sneeze power with distance
+	var distance_ratio = particle_origin.distance_to(path_position) / 32.0
+	emitter_material.initial_velocity *= distance_ratio
+	emitter_material.damping *= distance_ratio
+	
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	set_snot_animation()
+	$Particles2D.set_one_shot(true)
+	$Particles2D.set_emitting(true)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -36,7 +48,7 @@ func _process(delta: float) -> void:
 			# Add a snot
 			snot_count += 1
 			set_snot_animation()
-			
+			$Particles2D.set_emitting(true)
 			snot_timer = 0.0
 
 
