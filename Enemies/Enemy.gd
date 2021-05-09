@@ -82,7 +82,7 @@ func _process(delta: float) -> void:
 	# Randomly decide to maybe play a coughing sound if infected
 	if self.is_infected():
 		random.randomize()
-		if random.randi_range(0, 50) < 1:
+		if random.randi_range(0, 100) < 1:
 			$CoughPlayer.play_random_sound()
 
 	# Otherwise, continue
