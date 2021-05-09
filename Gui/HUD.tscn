@@ -5,7 +5,7 @@
 [ext_resource path="res://Gui/Bank.gd" type="Script" id=3]
 [ext_resource path="res://Towers/BatTower.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Towers/CellTower.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Towers/Tower.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Towers/TrumpTower.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Towers/LidlTower.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Towers/NertsTower.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Towers/FastfoodTower.tscn" type="PackedScene" id=9]
@@ -16,7 +16,7 @@
 [ext_resource path="res://Sprites/grot.png" type="Texture" id=14]
 [ext_resource path="res://Sprites/zendmast.png" type="Texture" id=15]
 [ext_resource path="res://Sprites/mcdrive.png" type="Texture" id=16]
-[ext_resource path="res://PlaceHolders/TowerPlaceholder.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/trump/trump_1.png" type="Texture" id=17]
 [ext_resource path="res://Sprites/lidl.png" type="Texture" id=18]
 [ext_resource path="res://Sprites/nertsboerderij.png" type="Texture" id=19]
 [ext_resource path="res://Sprites/router.png" type="Texture" id=20]
@@ -192,7 +192,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SlowTower" type="Button" parent="SideBar/TowerOptions"]
+[node name="Trump" type="Button" parent="SideBar/TowerOptions"]
 margin_top = 53.0
 margin_right = 128.0
 margin_bottom = 73.0
@@ -247,7 +247,9 @@ default_description = "Hover over the buttons to get a description of a tower"
 bat_tower_texture = ExtResource( 14 )
 bat_tower_name = "Bat Cave"
 bat_tower_description = "Occasionally spawns (1) bat that will infect one civilian, can store up to (3) bats at once."
-slow_tower_texture = ExtResource( 17 )
+trump_tower_texture = ExtResource( 17 )
+trump_tower_name = "Donald J. Trump"
+trump_tower_description = "Rallys enemies, slowing them down to listen to his speech"
 cell_tower_texture = ExtResource( 15 )
 cell_tower_name = "5G Cell tower"
 cell_tower_description = "The transmission tower emits a 5G-signal that weakens the \"vaccines\"."
@@ -299,8 +301,8 @@ autowrap = true
 
 [connection signal="mouse_entered" from="SideBar/TowerOptions/BatTower" to="SideBar/TowerPreview" method="_on_BatTower_mouse_entered"]
 [connection signal="pressed" from="SideBar/TowerOptions/BatTower" to="SideBar/TowerOptions" method="_on_BatTower_pressed"]
-[connection signal="mouse_entered" from="SideBar/TowerOptions/SlowTower" to="SideBar/TowerPreview" method="_on_SlowTower_mouse_entered"]
-[connection signal="pressed" from="SideBar/TowerOptions/SlowTower" to="SideBar/TowerOptions" method="_on_SlowTower_pressed"]
+[connection signal="mouse_entered" from="SideBar/TowerOptions/Trump" to="SideBar/TowerPreview" method="_on_SlowTower_mouse_entered"]
+[connection signal="pressed" from="SideBar/TowerOptions/Trump" to="SideBar/TowerOptions" method="_on_SlowTower_pressed"]
 [connection signal="mouse_entered" from="SideBar/TowerOptions/CellTower" to="SideBar/TowerPreview" method="_on_CellTower_mouse_entered"]
 [connection signal="pressed" from="SideBar/TowerOptions/CellTower" to="SideBar/TowerOptions" method="_on_CellTower_pressed"]
 [connection signal="mouse_entered" from="SideBar/TowerOptions/FastfoodTower" to="SideBar/TowerPreview" method="_on_FastfoodTower_mouse_entered"]

@@ -13,9 +13,9 @@ export (Texture) var bat_tower_texture
 export (String) var bat_tower_name
 export (String) var bat_tower_description
 
-export (Texture) var slow_tower_texture
-export (String) var slow_tower_name
-export (String) var slow_tower_description
+export (Texture) var trump_tower_texture
+export (String) var trump_tower_name
+export (String) var trump_tower_description
 
 export (Texture) var cell_tower_texture
 export (String) var cell_tower_name
@@ -57,8 +57,8 @@ func _on_BatTower_mouse_entered() -> void:
 	update_preview(bat_tower_texture, bat_tower_name, bat_tower_description)
 
 
-func _on_SlowTower_mouse_entered() -> void:
-	update_preview(slow_tower_texture, slow_tower_name, slow_tower_description)
+func _on_Trump_mouse_entered() -> void:
+	update_preview(trump_tower_texture, trump_tower_name, trump_tower_description)
 
 
 func _on_CellTower_mouse_entered() -> void:
