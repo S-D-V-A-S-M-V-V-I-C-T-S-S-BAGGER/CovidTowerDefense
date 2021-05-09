@@ -73,7 +73,7 @@ __meta__ = {
 tile_set = SubResource( 1 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 65536, 0, 0, 65553, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 131089, 0, 0, 131093, 0, 0, 131094, 0, 0, 131095, 0, 0, 131096, 0, 0, 131097, 0, 0, 196623, 0, 0, 196625, 0, 0, 196629, 0, 0, 196633, 0, 0, 262159, 0, 0, 262161, 0, 0, 262165, 0, 0, 262167, 0, 0, 262169, 0, 0, 327695, 0, 0, 327697, 0, 0, 327698, 0, 0, 327699, 0, 0, 327700, 0, 0, 327701, 0, 0, 327703, 0, 0, 327705, 0, 0, 393226, 0, 0, 393231, 0, 0, 393239, 0, 0, 393241, 0, 0, 458767, 0, 0, 458768, 0, 0, 458769, 0, 0, 458770, 0, 0, 458771, 0, 0, 458772, 0, 0, 458773, 0, 0, 458774, 0, 0, 458775, 0, 0, 458777, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0, 524306, 0, 0, 524307, 0, 0, 524308, 0, 0, 524309, 0, 0, 524310, 0, 0, 524311, 0, 0, 524313, 0, 0, 589834, 0, 0, 589849, 0, 0, 655369, 0, 0, 655370, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 655378, 0, 0, 655379, 0, 0, 655380, 0, 0, 655381, 0, 0, 655382, 0, 0, 655383, 0, 0, 655384, 0, 0, 655385, 0, 0, 720905, 0, 0, 720908, 0, 0, 786441, 0, 0, 786443, 0, 0, 786444, 0, 0, 851977, 0, 0, 851979, 0, 0, 917513, 0, 0, 917515, 0, 0, 983049, 0, 0, 983051, 0, 0, 1048585, 0, 0, 1048587, 0, 0, 1048588, 0, 0, 1048589, 0, 0, 1048590, 0, 0, 1048591, 0, 0, 1048592, 0, 0, 1048593, 0, 0, 1048594, 0, 0, 1048595, 0, 0, 1048596, 0, 0, 1048597, 0, 0, 1048598, 0, 0, 1048599, 0, 0, 1048600, 0, 0, 1048601, 0, 0, 1048602, 0, 0, 1048603, 0, 0, 1048604, 0, 0, 1048605, 0, 0, 1048606, 0, 0, 1048607, 0, 0, 1114121, 0, 0, 1179657, 0, 0, 1179658, 0, 0, 1179659, 0, 0, 1179660, 0, 0, 1179661, 0, 0, 1179662, 0, 0, 1179663, 0, 0, 1179664, 0, 0, 1179665, 0, 0, 1179666, 0, 0, 1179667, 0, 0, 1179668, 0, 0, 1179669, 0, 0, 1179670, 0, 0, 1179671, 0, 0, 1179672, 0, 0, 1179673, 0, 0, 1179674, 0, 0, 1179675, 0, 0, 1179676, 0, 0, 1179677, 0, 0, 1179678, 0, 0, 1179679, 0, 0 )
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 65536, 0, 0, 65553, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 131089, 0, 0, 131093, 0, 0, 131094, 0, 0, 131095, 0, 0, 131096, 0, 0, 131097, 0, 0, 196623, 0, 0, 196625, 0, 0, 196629, 0, 0, 196633, 0, 0, 262159, 0, 0, 262161, 0, 0, 262165, 0, 0, 262167, 0, 0, 262169, 0, 0, 327695, 0, 0, 327697, 0, 0, 327698, 0, 0, 327699, 0, 0, 327700, 0, 0, 327701, 0, 0, 327703, 0, 0, 327705, 0, 0, 393231, 0, 0, 393239, 0, 0, 393241, 0, 0, 458767, 0, 0, 458768, 0, 0, 458769, 0, 0, 458770, 0, 0, 458771, 0, 0, 458772, 0, 0, 458773, 0, 0, 458774, 0, 0, 458775, 0, 0, 458777, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0, 524306, 0, 0, 524307, 0, 0, 524308, 0, 0, 524309, 0, 0, 524310, 0, 0, 524311, 0, 0, 524313, 0, 0, 589834, 0, 0, 589849, 0, 0, 655369, 0, 0, 655370, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 655378, 0, 0, 655379, 0, 0, 655380, 0, 0, 655381, 0, 0, 655382, 0, 0, 655383, 0, 0, 655384, 0, 0, 655385, 0, 0, 720905, 0, 0, 720908, 0, 0, 786441, 0, 0, 786443, 0, 0, 786444, 0, 0, 851977, 0, 0, 851979, 0, 0, 917513, 0, 0, 917515, 0, 0, 983049, 0, 0, 983051, 0, 0, 1048585, 0, 0, 1048587, 0, 0, 1048588, 0, 0, 1048589, 0, 0, 1048590, 0, 0, 1048591, 0, 0, 1048592, 0, 0, 1048593, 0, 0, 1048594, 0, 0, 1048595, 0, 0, 1048596, 0, 0, 1048597, 0, 0, 1048598, 0, 0, 1048599, 0, 0, 1048600, 0, 0, 1048601, 0, 0, 1048602, 0, 0, 1048603, 0, 0, 1048604, 0, 0, 1048605, 0, 0, 1048606, 0, 0, 1048607, 0, 0, 1114121, 0, 0, 1179657, 0, 0, 1179658, 0, 0, 1179659, 0, 0, 1179660, 0, 0, 1179661, 0, 0, 1179662, 0, 0, 1179663, 0, 0, 1179664, 0, 0, 1179665, 0, 0, 1179666, 0, 0, 1179667, 0, 0, 1179668, 0, 0, 1179669, 0, 0, 1179670, 0, 0, 1179671, 0, 0, 1179672, 0, 0, 1179673, 0, 0, 1179674, 0, 0, 1179675, 0, 0, 1179676, 0, 0, 1179677, 0, 0, 1179678, 0, 0, 1179679, 0, 0 )
 
 [node name="Path" type="Path2D" parent="."]
 curve = SubResource( 2 )
@@ -93,22 +93,922 @@ spawner_path = NodePath("../../Spawner")
 enemy_parent_path = NodePath("../../Enemies")
 
 [node name="TowerPlacer" parent="CanvasLayer/HUD/TowerPositions" index="0" instance=ExtResource( 9 )]
-position = Vector2( 336, 80 )
+position = Vector2( 143.235, 80 )
 
 [node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer" index="2"]
-position = Vector2( 32, 0 )
+position = Vector2( -1.16782, -32.511 )
 
-[node name="TowerPlacer2" parent="CanvasLayer/HUD/TowerPositions" index="1" instance=ExtResource( 9 )]
-position = Vector2( 208, 144 )
+[node name="TowerPlacer4" parent="CanvasLayer/HUD/TowerPositions" index="1" instance=ExtResource( 9 )]
+position = Vector2( 175.235, 80 )
 
-[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer2" index="2"]
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer4" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer5" parent="CanvasLayer/HUD/TowerPositions" index="2" instance=ExtResource( 9 )]
+position = Vector2( 207.235, 80 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer5" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer6" parent="CanvasLayer/HUD/TowerPositions" index="3" instance=ExtResource( 9 )]
+position = Vector2( 239.235, 80 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer6" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer7" parent="CanvasLayer/HUD/TowerPositions" index="4" instance=ExtResource( 9 )]
+position = Vector2( 271.235, 80 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer7" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer8" parent="CanvasLayer/HUD/TowerPositions" index="5" instance=ExtResource( 9 )]
+position = Vector2( 303.235, 80 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer8" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer9" parent="CanvasLayer/HUD/TowerPositions" index="6" instance=ExtResource( 9 )]
+position = Vector2( 335.235, 80 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer9" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer10" parent="CanvasLayer/HUD/TowerPositions" index="7" instance=ExtResource( 9 )]
+position = Vector2( 367.235, 80 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer10" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer11" parent="CanvasLayer/HUD/TowerPositions" index="8" instance=ExtResource( 9 )]
+position = Vector2( 399.235, 80 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer11" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer12" parent="CanvasLayer/HUD/TowerPositions" index="9" instance=ExtResource( 9 )]
+position = Vector2( 431.235, 80 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer12" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer13" parent="CanvasLayer/HUD/TowerPositions" index="10" instance=ExtResource( 9 )]
+position = Vector2( 463.235, 80 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer13" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer14" parent="CanvasLayer/HUD/TowerPositions" index="11" instance=ExtResource( 9 )]
+position = Vector2( 495.235, 80 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer14" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer15" parent="CanvasLayer/HUD/TowerPositions" index="12" instance=ExtResource( 9 )]
+position = Vector2( 527.235, 240 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer15" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer16" parent="CanvasLayer/HUD/TowerPositions" index="13" instance=ExtResource( 9 )]
+position = Vector2( 559.235, 240 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer16" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer17" parent="CanvasLayer/HUD/TowerPositions" index="14" instance=ExtResource( 9 )]
+position = Vector2( 591.235, 240 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer17" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer18" parent="CanvasLayer/HUD/TowerPositions" index="15" instance=ExtResource( 9 )]
+position = Vector2( 623.235, 240 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer18" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer19" parent="CanvasLayer/HUD/TowerPositions" index="16" instance=ExtResource( 9 )]
+position = Vector2( 655.235, 240 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer19" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer20" parent="CanvasLayer/HUD/TowerPositions" index="17" instance=ExtResource( 9 )]
+position = Vector2( 687.235, 240 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer20" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer21" parent="CanvasLayer/HUD/TowerPositions" index="18" instance=ExtResource( 9 )]
+position = Vector2( 719.235, 240 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer21" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer22" parent="CanvasLayer/HUD/TowerPositions" index="19" instance=ExtResource( 9 )]
+position = Vector2( 751.235, 144 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer22" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer23" parent="CanvasLayer/HUD/TowerPositions" index="20" instance=ExtResource( 9 )]
+position = Vector2( 783.235, 336 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer23" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer24" parent="CanvasLayer/HUD/TowerPositions" index="21" instance=ExtResource( 9 )]
+position = Vector2( 751.235, 336 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer24" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer25" parent="CanvasLayer/HUD/TowerPositions" index="22" instance=ExtResource( 9 )]
+position = Vector2( 719.235, 336 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer25" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer26" parent="CanvasLayer/HUD/TowerPositions" index="23" instance=ExtResource( 9 )]
+position = Vector2( 687.235, 336 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer26" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer27" parent="CanvasLayer/HUD/TowerPositions" index="24" instance=ExtResource( 9 )]
+position = Vector2( 655.235, 336 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer27" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer28" parent="CanvasLayer/HUD/TowerPositions" index="25" instance=ExtResource( 9 )]
+position = Vector2( 623.235, 336 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer28" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer29" parent="CanvasLayer/HUD/TowerPositions" index="26" instance=ExtResource( 9 )]
+position = Vector2( 591.235, 336 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer29" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer30" parent="CanvasLayer/HUD/TowerPositions" index="27" instance=ExtResource( 9 )]
+position = Vector2( 559.235, 336 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer30" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer31" parent="CanvasLayer/HUD/TowerPositions" index="28" instance=ExtResource( 9 )]
+position = Vector2( 527.235, 336 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer31" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer32" parent="CanvasLayer/HUD/TowerPositions" index="29" instance=ExtResource( 9 )]
+position = Vector2( 495.235, 336 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer32" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer33" parent="CanvasLayer/HUD/TowerPositions" index="30" instance=ExtResource( 9 )]
+position = Vector2( 463.235, 336 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer33" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer34" parent="CanvasLayer/HUD/TowerPositions" index="31" instance=ExtResource( 9 )]
+position = Vector2( 431.235, 336 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer34" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer35" parent="CanvasLayer/HUD/TowerPositions" index="32" instance=ExtResource( 9 )]
+position = Vector2( 399.235, 336 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer35" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer36" parent="CanvasLayer/HUD/TowerPositions" index="33" instance=ExtResource( 9 )]
+position = Vector2( 367.235, 400 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer36" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer37" parent="CanvasLayer/HUD/TowerPositions" index="34" instance=ExtResource( 9 )]
+position = Vector2( 335.235, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer37" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer38" parent="CanvasLayer/HUD/TowerPositions" index="35" instance=ExtResource( 9 )]
+position = Vector2( 367.235, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer38" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer39" parent="CanvasLayer/HUD/TowerPositions" index="36" instance=ExtResource( 9 )]
+position = Vector2( 399.235, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer39" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer40" parent="CanvasLayer/HUD/TowerPositions" index="37" instance=ExtResource( 9 )]
+position = Vector2( 431.235, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer40" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer41" parent="CanvasLayer/HUD/TowerPositions" index="38" instance=ExtResource( 9 )]
+position = Vector2( 463.235, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer41" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer42" parent="CanvasLayer/HUD/TowerPositions" index="39" instance=ExtResource( 9 )]
+position = Vector2( 495.235, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer42" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer43" parent="CanvasLayer/HUD/TowerPositions" index="40" instance=ExtResource( 9 )]
+position = Vector2( 527.235, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer43" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer44" parent="CanvasLayer/HUD/TowerPositions" index="41" instance=ExtResource( 9 )]
+position = Vector2( 559.235, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer44" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer45" parent="CanvasLayer/HUD/TowerPositions" index="42" instance=ExtResource( 9 )]
+position = Vector2( 591.235, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer45" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer46" parent="CanvasLayer/HUD/TowerPositions" index="43" instance=ExtResource( 9 )]
+position = Vector2( 623.235, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer46" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer47" parent="CanvasLayer/HUD/TowerPositions" index="44" instance=ExtResource( 9 )]
+position = Vector2( 655.235, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer47" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer48" parent="CanvasLayer/HUD/TowerPositions" index="45" instance=ExtResource( 9 )]
+position = Vector2( 687.235, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer48" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer49" parent="CanvasLayer/HUD/TowerPositions" index="46" instance=ExtResource( 9 )]
+position = Vector2( 719.235, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer49" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer50" parent="CanvasLayer/HUD/TowerPositions" index="47" instance=ExtResource( 9 )]
+position = Vector2( 751.235, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer50" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer51" parent="CanvasLayer/HUD/TowerPositions" index="48" instance=ExtResource( 9 )]
+position = Vector2( 783.235, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer51" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer52" parent="CanvasLayer/HUD/TowerPositions" index="49" instance=ExtResource( 9 )]
+position = Vector2( 815.235, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer52" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer53" parent="CanvasLayer/HUD/TowerPositions" index="50" instance=ExtResource( 9 )]
+position = Vector2( 847.235, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer53" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer54" parent="CanvasLayer/HUD/TowerPositions" index="51" instance=ExtResource( 9 )]
+position = Vector2( 879.235, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer54" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer55" parent="CanvasLayer/HUD/TowerPositions" index="52" instance=ExtResource( 9 )]
+position = Vector2( 911.235, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer55" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer56" parent="CanvasLayer/HUD/TowerPositions" index="53" instance=ExtResource( 9 )]
+position = Vector2( 943.235, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer56" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer57" parent="CanvasLayer/HUD/TowerPositions" index="54" instance=ExtResource( 9 )]
+position = Vector2( 975.235, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer57" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer58" parent="CanvasLayer/HUD/TowerPositions" index="55" instance=ExtResource( 9 )]
+position = Vector2( 1007.24, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer58" index="2"]
+position = Vector2( -1.16782, -32.511 )
+
+[node name="TowerPlacer59" parent="CanvasLayer/HUD/TowerPositions" index="56" instance=ExtResource( 9 )]
+position = Vector2( 1007.24, 528 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer59" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer60" parent="CanvasLayer/HUD/TowerPositions" index="57" instance=ExtResource( 9 )]
+position = Vector2( 975.235, 528 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer60" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer61" parent="CanvasLayer/HUD/TowerPositions" index="58" instance=ExtResource( 9 )]
+position = Vector2( 943.235, 528 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer61" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer62" parent="CanvasLayer/HUD/TowerPositions" index="59" instance=ExtResource( 9 )]
+position = Vector2( 911.235, 528 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer62" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer63" parent="CanvasLayer/HUD/TowerPositions" index="60" instance=ExtResource( 9 )]
+position = Vector2( 879.235, 528 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer63" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer64" parent="CanvasLayer/HUD/TowerPositions" index="61" instance=ExtResource( 9 )]
+position = Vector2( 847.235, 528 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer64" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer65" parent="CanvasLayer/HUD/TowerPositions" index="62" instance=ExtResource( 9 )]
+position = Vector2( 815.235, 528 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer65" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer66" parent="CanvasLayer/HUD/TowerPositions" index="63" instance=ExtResource( 9 )]
+position = Vector2( 783.235, 528 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer66" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer67" parent="CanvasLayer/HUD/TowerPositions" index="64" instance=ExtResource( 9 )]
+position = Vector2( 751.235, 528 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer67" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer68" parent="CanvasLayer/HUD/TowerPositions" index="65" instance=ExtResource( 9 )]
+position = Vector2( 719.235, 528 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer68" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer69" parent="CanvasLayer/HUD/TowerPositions" index="66" instance=ExtResource( 9 )]
+position = Vector2( 687.235, 528 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer69" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer70" parent="CanvasLayer/HUD/TowerPositions" index="67" instance=ExtResource( 9 )]
+position = Vector2( 655.235, 528 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer70" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer71" parent="CanvasLayer/HUD/TowerPositions" index="68" instance=ExtResource( 9 )]
+position = Vector2( 623.235, 528 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer71" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer72" parent="CanvasLayer/HUD/TowerPositions" index="69" instance=ExtResource( 9 )]
+position = Vector2( 591.235, 528 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer72" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer73" parent="CanvasLayer/HUD/TowerPositions" index="70" instance=ExtResource( 9 )]
+position = Vector2( 559.235, 528 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer73" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer74" parent="CanvasLayer/HUD/TowerPositions" index="71" instance=ExtResource( 9 )]
+position = Vector2( 527.235, 528 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer74" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer75" parent="CanvasLayer/HUD/TowerPositions" index="72" instance=ExtResource( 9 )]
+position = Vector2( 495.235, 528 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer75" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer76" parent="CanvasLayer/HUD/TowerPositions" index="73" instance=ExtResource( 9 )]
+position = Vector2( 463.235, 528 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer76" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer77" parent="CanvasLayer/HUD/TowerPositions" index="74" instance=ExtResource( 9 )]
+position = Vector2( 431.235, 528 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer77" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer78" parent="CanvasLayer/HUD/TowerPositions" index="75" instance=ExtResource( 9 )]
+position = Vector2( 399.235, 528 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer78" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer79" parent="CanvasLayer/HUD/TowerPositions" index="76" instance=ExtResource( 9 )]
+position = Vector2( 367.235, 272 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer79" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer80" parent="CanvasLayer/HUD/TowerPositions" index="77" instance=ExtResource( 9 )]
+position = Vector2( 399.235, 272 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer80" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer81" parent="CanvasLayer/HUD/TowerPositions" index="78" instance=ExtResource( 9 )]
+position = Vector2( 431.235, 272 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer81" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer82" parent="CanvasLayer/HUD/TowerPositions" index="79" instance=ExtResource( 9 )]
+position = Vector2( 463.235, 272 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer82" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer83" parent="CanvasLayer/HUD/TowerPositions" index="80" instance=ExtResource( 9 )]
+position = Vector2( 495.235, 272 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer83" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer84" parent="CanvasLayer/HUD/TowerPositions" index="81" instance=ExtResource( 9 )]
+position = Vector2( 527.235, 272 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer84" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer85" parent="CanvasLayer/HUD/TowerPositions" index="82" instance=ExtResource( 9 )]
+position = Vector2( 559.235, 272 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer85" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer86" parent="CanvasLayer/HUD/TowerPositions" index="83" instance=ExtResource( 9 )]
+position = Vector2( 591.235, 272 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer86" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer87" parent="CanvasLayer/HUD/TowerPositions" index="84" instance=ExtResource( 9 )]
+position = Vector2( 623.235, 272 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer87" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer88" parent="CanvasLayer/HUD/TowerPositions" index="85" instance=ExtResource( 9 )]
+position = Vector2( 655.235, 272 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer88" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer89" parent="CanvasLayer/HUD/TowerPositions" index="86" instance=ExtResource( 9 )]
+position = Vector2( 687.235, 272 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer89" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer90" parent="CanvasLayer/HUD/TowerPositions" index="87" instance=ExtResource( 9 )]
+position = Vector2( 719.235, 272 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer90" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer91" parent="CanvasLayer/HUD/TowerPositions" index="88" instance=ExtResource( 9 )]
+position = Vector2( 751.235, 272 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer91" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer92" parent="CanvasLayer/HUD/TowerPositions" index="89" instance=ExtResource( 9 )]
+position = Vector2( 783.235, 80 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer92" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer93" parent="CanvasLayer/HUD/TowerPositions" index="90" instance=ExtResource( 9 )]
+position = Vector2( 751.235, 80 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer93" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer94" parent="CanvasLayer/HUD/TowerPositions" index="91" instance=ExtResource( 9 )]
+position = Vector2( 719.235, 80 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer94" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer95" parent="CanvasLayer/HUD/TowerPositions" index="92" instance=ExtResource( 9 )]
+position = Vector2( 687.235, 176 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer95" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer96" parent="CanvasLayer/HUD/TowerPositions" index="93" instance=ExtResource( 9 )]
+position = Vector2( 655.235, 176 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer96" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer97" parent="CanvasLayer/HUD/TowerPositions" index="94" instance=ExtResource( 9 )]
+position = Vector2( 623.235, 176 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer97" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer98" parent="CanvasLayer/HUD/TowerPositions" index="95" instance=ExtResource( 9 )]
+position = Vector2( 591.235, 176 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer98" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer99" parent="CanvasLayer/HUD/TowerPositions" index="96" instance=ExtResource( 9 )]
+position = Vector2( 527.235, 16 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer99" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer100" parent="CanvasLayer/HUD/TowerPositions" index="97" instance=ExtResource( 9 )]
+position = Vector2( 495.235, 16 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer100" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer101" parent="CanvasLayer/HUD/TowerPositions" index="98" instance=ExtResource( 9 )]
+position = Vector2( 463.235, 16 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer101" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer102" parent="CanvasLayer/HUD/TowerPositions" index="99" instance=ExtResource( 9 )]
+position = Vector2( 431.235, 16 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer102" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer103" parent="CanvasLayer/HUD/TowerPositions" index="100" instance=ExtResource( 9 )]
+position = Vector2( 399.235, 16 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer103" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer104" parent="CanvasLayer/HUD/TowerPositions" index="101" instance=ExtResource( 9 )]
+position = Vector2( 367.235, 16 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer104" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer105" parent="CanvasLayer/HUD/TowerPositions" index="102" instance=ExtResource( 9 )]
+position = Vector2( 335.235, 16 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer105" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer106" parent="CanvasLayer/HUD/TowerPositions" index="103" instance=ExtResource( 9 )]
+position = Vector2( 303.235, 16 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer106" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer107" parent="CanvasLayer/HUD/TowerPositions" index="104" instance=ExtResource( 9 )]
+position = Vector2( 271.235, 16 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer107" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer108" parent="CanvasLayer/HUD/TowerPositions" index="105" instance=ExtResource( 9 )]
+position = Vector2( 239.235, 16 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer108" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer109" parent="CanvasLayer/HUD/TowerPositions" index="106" instance=ExtResource( 9 )]
+position = Vector2( 207.235, 16 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer109" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer110" parent="CanvasLayer/HUD/TowerPositions" index="107" instance=ExtResource( 9 )]
+position = Vector2( 175.235, 16 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer110" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer111" parent="CanvasLayer/HUD/TowerPositions" index="108" instance=ExtResource( 9 )]
+position = Vector2( 143.235, 16 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer111" index="2"]
+position = Vector2( 3.05176e-05, 32 )
+
+[node name="TowerPlacer112" parent="CanvasLayer/HUD/TowerPositions" index="109" instance=ExtResource( 9 )]
+position = Vector2( 559.235, 48 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer112" index="2"]
 position = Vector2( -32, 0 )
 
-[node name="TowerPlacer3" parent="CanvasLayer/HUD/TowerPositions" index="2" instance=ExtResource( 9 )]
-position = Vector2( 336, 208 )
+[node name="TowerPlacer113" parent="CanvasLayer/HUD/TowerPositions" index="110" instance=ExtResource( 9 )]
+position = Vector2( 559.235, 80 )
 
-[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer3" index="2"]
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer113" index="2"]
+position = Vector2( -32, 0 )
+
+[node name="TowerPlacer114" parent="CanvasLayer/HUD/TowerPositions" index="111" instance=ExtResource( 9 )]
+position = Vector2( 559.235, 112 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer114" index="2"]
+position = Vector2( -32, 0 )
+
+[node name="TowerPlacer115" parent="CanvasLayer/HUD/TowerPositions" index="112" instance=ExtResource( 9 )]
+position = Vector2( 559.235, 144 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer115" index="2"]
+position = Vector2( -32, 0 )
+
+[node name="TowerPlacer116" parent="CanvasLayer/HUD/TowerPositions" index="113" instance=ExtResource( 9 )]
+position = Vector2( 751.235, 176 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer116" index="2"]
+position = Vector2( -32, 0 )
+
+[node name="TowerPlacer117" parent="CanvasLayer/HUD/TowerPositions" index="114" instance=ExtResource( 9 )]
+position = Vector2( 751.235, 208 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer117" index="2"]
+position = Vector2( -32, 0 )
+
+[node name="TowerPlacer118" parent="CanvasLayer/HUD/TowerPositions" index="115" instance=ExtResource( 9 )]
+position = Vector2( 815.235, 112 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer118" index="2"]
+position = Vector2( -32, 0 )
+
+[node name="TowerPlacer119" parent="CanvasLayer/HUD/TowerPositions" index="116" instance=ExtResource( 9 )]
+position = Vector2( 815.235, 144 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer119" index="2"]
+position = Vector2( -32, 0 )
+
+[node name="TowerPlacer120" parent="CanvasLayer/HUD/TowerPositions" index="117" instance=ExtResource( 9 )]
+position = Vector2( 815.235, 176 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer120" index="2"]
+position = Vector2( -32, 0 )
+
+[node name="TowerPlacer121" parent="CanvasLayer/HUD/TowerPositions" index="118" instance=ExtResource( 9 )]
+position = Vector2( 815.235, 208 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer121" index="2"]
+position = Vector2( -32, 0 )
+
+[node name="TowerPlacer122" parent="CanvasLayer/HUD/TowerPositions" index="119" instance=ExtResource( 9 )]
+position = Vector2( 815.235, 240 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer122" index="2"]
+position = Vector2( -32, 0 )
+
+[node name="TowerPlacer123" parent="CanvasLayer/HUD/TowerPositions" index="120" instance=ExtResource( 9 )]
+position = Vector2( 815.235, 272 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer123" index="2"]
+position = Vector2( -32, 0 )
+
+[node name="TowerPlacer124" parent="CanvasLayer/HUD/TowerPositions" index="121" instance=ExtResource( 9 )]
+position = Vector2( 815.235, 304 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer124" index="2"]
+position = Vector2( -32, 0 )
+
+[node name="TowerPlacer126" parent="CanvasLayer/HUD/TowerPositions" index="122" instance=ExtResource( 9 )]
+position = Vector2( 367.235, 464 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer126" index="2"]
+position = Vector2( -32, 0 )
+
+[node name="TowerPlacer127" parent="CanvasLayer/HUD/TowerPositions" index="123" instance=ExtResource( 9 )]
+position = Vector2( 367.235, 496 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer127" index="2"]
+position = Vector2( -32, 0 )
+
+[node name="TowerPlacer128" parent="CanvasLayer/HUD/TowerPositions" index="124" instance=ExtResource( 9 )]
+position = Vector2( 399.235, 368 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer128" index="2"]
+position = Vector2( -32, 0 )
+
+[node name="TowerPlacer129" parent="CanvasLayer/HUD/TowerPositions" index="125" instance=ExtResource( 9 )]
+position = Vector2( 335.235, 304 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer129" index="2"]
 position = Vector2( 32, 0 )
+
+[node name="TowerPlacer130" parent="CanvasLayer/HUD/TowerPositions" index="126" instance=ExtResource( 9 )]
+position = Vector2( 335.235, 336 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer130" index="2"]
+position = Vector2( 32, 0 )
+
+[node name="TowerPlacer131" parent="CanvasLayer/HUD/TowerPositions" index="127" instance=ExtResource( 9 )]
+position = Vector2( 303.235, 368 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer131" index="2"]
+position = Vector2( 32, 0 )
+
+[node name="TowerPlacer132" parent="CanvasLayer/HUD/TowerPositions" index="128" instance=ExtResource( 9 )]
+position = Vector2( 303.235, 400 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer132" index="2"]
+position = Vector2( 32, 0 )
+
+[node name="TowerPlacer133" parent="CanvasLayer/HUD/TowerPositions" index="129" instance=ExtResource( 9 )]
+position = Vector2( 303.235, 432 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer133" index="2"]
+position = Vector2( 32, 0 )
+
+[node name="TowerPlacer134" parent="CanvasLayer/HUD/TowerPositions" index="130" instance=ExtResource( 9 )]
+position = Vector2( 303.235, 464 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer134" index="2"]
+position = Vector2( 32, 0 )
+
+[node name="TowerPlacer135" parent="CanvasLayer/HUD/TowerPositions" index="131" instance=ExtResource( 9 )]
+position = Vector2( 303.235, 496 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer135" index="2"]
+position = Vector2( 32, 0 )
+
+[node name="TowerPlacer136" parent="CanvasLayer/HUD/TowerPositions" index="132" instance=ExtResource( 9 )]
+position = Vector2( 303.235, 528 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer136" index="2"]
+position = Vector2( 32, 0 )
+
+[node name="TowerPlacer137" parent="CanvasLayer/HUD/TowerPositions" index="133" instance=ExtResource( 9 )]
+position = Vector2( 303.235, 560 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer137" index="2"]
+position = Vector2( 32, 0 )
+
+[node name="TowerPlacer138" parent="CanvasLayer/HUD/TowerPositions" index="134" instance=ExtResource( 9 )]
+position = Vector2( 495.235, 208 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer138" index="2"]
+position = Vector2( 32, 0 )
+
+[node name="TowerPlacer139" parent="CanvasLayer/HUD/TowerPositions" index="135" instance=ExtResource( 9 )]
+position = Vector2( 495.235, 176 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer139" index="2"]
+position = Vector2( 32, 0 )
+
+[node name="TowerPlacer140" parent="CanvasLayer/HUD/TowerPositions" index="136" instance=ExtResource( 9 )]
+position = Vector2( 495.235, 144 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer140" index="2"]
+position = Vector2( 32, 0 )
+
+[node name="TowerPlacer141" parent="CanvasLayer/HUD/TowerPositions" index="137" instance=ExtResource( 9 )]
+position = Vector2( 495.235, 112 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer141" index="2"]
+position = Vector2( 32, 0 )
+
+[node name="TowerPlacer142" parent="CanvasLayer/HUD/TowerPositions" index="138" instance=ExtResource( 9 )]
+position = Vector2( 495.235, 240 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer142" index="2"]
+position = Vector2( 32, -32 )
+
+[node name="TowerPlacer143" parent="CanvasLayer/HUD/TowerPositions" index="139" instance=ExtResource( 9 )]
+position = Vector2( 303.235, 592 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer143" index="2"]
+position = Vector2( 32, -32 )
+
+[node name="TowerPlacer144" parent="CanvasLayer/HUD/TowerPositions" index="140" instance=ExtResource( 9 )]
+position = Vector2( 367.235, 528 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer144" index="2"]
+position = Vector2( -32, 32 )
+
+[node name="TowerPlacer145" parent="CanvasLayer/HUD/TowerPositions" index="141" instance=ExtResource( 9 )]
+position = Vector2( 815.235, 80 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer145" index="2"]
+position = Vector2( -32, 32 )
+
+[node name="TowerPlacer146" parent="CanvasLayer/HUD/TowerPositions" index="142" instance=ExtResource( 9 )]
+position = Vector2( 559.235, 16 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer146" index="2"]
+position = Vector2( -32, 32 )
+
+[node name="TowerPlacer147" parent="CanvasLayer/HUD/TowerPositions" index="143" instance=ExtResource( 9 )]
+position = Vector2( 687.235, 144 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer147" index="2"]
+position = Vector2( 32, 0 )
+
+[node name="TowerPlacer148" parent="CanvasLayer/HUD/TowerPositions" index="144" instance=ExtResource( 9 )]
+position = Vector2( 687.235, 112 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer148" index="2"]
+position = Vector2( 32, 0 )
+
+[node name="TowerPlacer149" parent="CanvasLayer/HUD/TowerPositions" index="145" instance=ExtResource( 9 )]
+position = Vector2( 751.235, 240 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer149" index="2"]
+position = Vector2( 32, 0 )
+
+[node name="TowerPlacer150" parent="CanvasLayer/HUD/TowerPositions" index="146" instance=ExtResource( 9 )]
+position = Vector2( 559.235, 176 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer150" index="2"]
+position = Vector2( -32, 32 )
+
+[node name="TowerPlacer151" parent="CanvasLayer/HUD/TowerPositions" index="147" instance=ExtResource( 9 )]
+position = Vector2( 687.235, 80 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer151" index="2"]
+position = Vector2( 32, 32 )
+
+[node name="TowerPlacer152" parent="CanvasLayer/HUD/TowerPositions" index="148" instance=ExtResource( 9 )]
+position = Vector2( 335.235, 272 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer152" index="2"]
+position = Vector2( 32, 32 )
+
+[node name="TowerPlacer153" parent="CanvasLayer/HUD/TowerPositions" index="149" instance=ExtResource( 9 )]
+position = Vector2( 303.235, 336 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer153" index="2"]
+position = Vector2( 32, 32 )
+
+[node name="TowerPlacer154" parent="CanvasLayer/HUD/TowerPositions" index="150" instance=ExtResource( 9 )]
+position = Vector2( 399.235, 400 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer154" index="2"]
+position = Vector2( -32, -32 )
+
+[node name="TowerPlacer155" parent="CanvasLayer/HUD/TowerPositions" index="151" instance=ExtResource( 9 )]
+position = Vector2( 815.235, 336 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer155" index="2"]
+position = Vector2( -32, -32 )
+
+[node name="TowerPlacer125" parent="CanvasLayer/HUD/TowerPositions" index="152" instance=ExtResource( 9 )]
+position = Vector2( 367.235, 432 )
+
+[node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer125" index="2"]
+position = Vector2( -32, 0 )
 
 [node name="EndScreen" type="ColorRect" parent="CanvasLayer"]
 visible = false
@@ -249,5 +1149,155 @@ text = "Continue"
 
 [editable path="CanvasLayer/HUD"]
 [editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer"]
-[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer2"]
-[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer3"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer4"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer5"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer6"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer7"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer8"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer9"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer10"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer11"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer12"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer13"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer14"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer15"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer16"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer17"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer18"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer19"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer20"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer21"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer22"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer23"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer24"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer25"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer26"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer27"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer28"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer29"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer30"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer31"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer32"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer33"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer34"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer35"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer36"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer37"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer38"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer39"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer40"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer41"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer42"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer43"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer44"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer45"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer46"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer47"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer48"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer49"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer50"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer51"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer52"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer53"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer54"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer55"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer56"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer57"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer58"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer59"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer60"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer61"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer62"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer63"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer64"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer65"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer66"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer67"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer68"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer69"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer70"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer71"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer72"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer73"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer74"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer75"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer76"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer77"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer78"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer79"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer80"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer81"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer82"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer83"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer84"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer85"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer86"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer87"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer88"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer89"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer90"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer91"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer92"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer93"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer94"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer95"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer96"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer97"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer98"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer99"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer100"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer101"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer102"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer103"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer104"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer105"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer106"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer107"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer108"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer109"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer110"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer111"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer112"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer113"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer114"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer115"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer116"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer117"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer118"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer119"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer120"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer121"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer122"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer123"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer124"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer126"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer127"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer128"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer129"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer130"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer131"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer132"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer133"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer134"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer135"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer136"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer137"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer138"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer139"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer140"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer141"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer142"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer143"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer144"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer145"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer146"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer147"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer148"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer149"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer150"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer151"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer152"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer153"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer154"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer155"]
+[editable path="CanvasLayer/HUD/TowerPositions/TowerPlacer125"]
