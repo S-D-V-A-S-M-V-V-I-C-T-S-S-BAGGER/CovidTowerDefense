@@ -12,6 +12,10 @@ export (PackedScene) var lidl_tower
 export (int) var lidl_tower_cost = 10
 export (PackedScene) var nerts_tower
 export (int) var nerts_tower_cost = 10
+export (PackedScene) var internet_tower
+export (int) var internet_tower_cost = 10
+export (PackedScene) var nose_tower
+export (int) var nose_tower_cost = 10
 
 var hud : Hud
 
@@ -61,3 +65,12 @@ func _on_LidlTower_pressed():
 
 func _on_NertsTower_pressed():
 	place_tower(nerts_tower, nerts_tower_cost)
+
+
+func _on_InternetTower_pressed():
+	place_tower(internet_tower, internet_tower_cost)
+
+
+func _on_Nose_pressed():
+	place_tower(nose_tower, nose_tower_cost)
+	pass # Replace with function body.
