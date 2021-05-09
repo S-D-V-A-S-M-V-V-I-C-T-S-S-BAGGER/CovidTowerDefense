@@ -1,0 +1,64 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Enemies/HealingEnemy.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/arts/arts_1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/arts/arts_2.png" type="Texture" id=3]
+[ext_resource path="res://PlaceHolders/schaap_death_1.png" type="Texture" id=4]
+[ext_resource path="res://PlaceHolders/schaap_death_0.png" type="Texture" id=5]
+[ext_resource path="res://PlaceHolders/schaap_death_2.png" type="Texture" id=6]
+[ext_resource path="res://Enemies/AudioStreamPlayer.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16, 16 )
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 64.0
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 6 ) ],
+"loop": false,
+"name": "death",
+"speed": 3.0
+} ]
+
+[node name="Doctor" type="Node2D"]
+script = ExtResource( 1 )
+base_health = 80.0
+
+[node name="Path" type="Path2D" parent="."]
+curve = null
+
+[node name="MovingPoint" type="PathFollow2D" parent="Path"]
+rotate = false
+loop = false
+
+[node name="Area2D" type="Area2D" parent="Path/MovingPoint"]
+collision_mask = 0
+
+[node name="Collision" type="CollisionShape2D" parent="Path/MovingPoint/Area2D"]
+self_modulate = Color( 1, 0, 0, 1 )
+shape = SubResource( 1 )
+
+[node name="Healing" type="Area2D" parent="Path/MovingPoint"]
+collision_layer = 4
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Path/MovingPoint/Healing"]
+self_modulate = Color( 0.360784, 1, 0, 1 )
+shape = SubResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Path/MovingPoint"]
+position = Vector2( 0.0853119, -0.0853195 )
+frames = SubResource( 3 )
+playing = true
+
+[node name="CoughPlayer" type="AudioStreamPlayer2D" parent="."]
+script = ExtResource( 7 )
+
+[connection signal="area_entered" from="Path/MovingPoint/Healing" to="." method="_on_Healing_area_entered"]
+[connection signal="area_exited" from="Path/MovingPoint/Healing" to="." method="_on_Healing_area_exited"]
