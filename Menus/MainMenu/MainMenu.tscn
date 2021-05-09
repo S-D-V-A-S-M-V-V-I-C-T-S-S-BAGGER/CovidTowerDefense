@@ -74,13 +74,15 @@ text = "Level 1"
 [node name="Level2Button" type="Button" parent="Margin/VBox/Margin/VBox"]
 margin_top = 43.0
 margin_right = 784.0
-margin_bottom = 63.0
+margin_bottom = 82.0
+custom_fonts/font = SubResource( 2 )
 text = "Level 2"
 
 [node name="Level3Button" type="Button" parent="Margin/VBox/Margin/VBox"]
-margin_top = 67.0
+margin_top = 86.0
 margin_right = 784.0
-margin_bottom = 87.0
+margin_bottom = 125.0
+custom_fonts/font = SubResource( 2 )
 text = "Level 3"
 
 [connection signal="pressed" from="Margin/VBox/Margin/VBox/Level1Button" to="." method="_on_Level1Button_pressed"]
