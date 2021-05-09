@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://PlaceHolders/PlaceHolderTile.png" type="Texture" id=1]
 [ext_resource path="res://PlaceHolders/Background.png" type="Texture" id=2]
@@ -18,9 +18,7 @@
 [ext_resource path="res://Sprites/path_block.png" type="Texture" id=16]
 [ext_resource path="res://Enemies/Student.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Enemies/Elder.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Levels/Waves/Wave.gd" type="Script" id=19]
 [ext_resource path="res://Enemies/Hazmat.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Enemies/Doctor.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Enemies/wappie.tscn" type="PackedScene" id=22]
 
 [sub_resource type="TileSet" id=1]
@@ -106,22 +104,865 @@ __meta__ = {
 
 [node name="Waves" type="Node" parent="."]
 
-[node name="Wave1" parent="Waves" instance=ExtResource( 11 )]
-enemies = [ ExtResource( 18 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 3 ) ]
-time_between_enemies = 2.0
-time_before_start = 5.0
-
-[node name="Wave2" type="Node" parent="Waves"]
-script = ExtResource( 19 )
-enemies = [ ExtResource( 17 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 22 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 21 ), ExtResource( 17 ), ExtResource( 22 ), ExtResource( 22 ) ]
+[node name="5elder" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
 time_between_enemies = 3.0
 time_before_start = 5.0
 
-[node name="Wave3" type="Node" parent="Waves"]
-script = ExtResource( 19 )
-enemies = [ ExtResource( 20 ), ExtResource( 21 ) ]
-time_between_enemies = 5.0
-time_before_start = 10.0
+[node name="Wave2" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 3.0
+time_before_start = 5.0
+
+[node name="Wave3" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="Wave4" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="Wave5" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 3.0
+time_before_start = 5.0
+
+[node name="5sheep" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="Wave6" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="Wave8" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 3.0
+time_before_start = 5.0
+
+[node name="Wave9" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="Wave10" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5sheep2" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5sheep3" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="Wave11" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 3.0
+time_before_start = 5.0
+
+[node name="5sheep4" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="Wave12" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5sheep5" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="Wave13" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5sheep6" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="Wave14" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5sheep7" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 3.0
+time_before_start = 5.0
+
+[node name="5student" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5sheep8" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5sheep9" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 3.0
+time_before_start = 5.0
+
+[node name="5sheep11" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5student2" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5sheep10" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5sheep12" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5sheep13" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 3.0
+time_before_start = 5.0
+
+[node name="Wave7" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5sheep14" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="Wave15" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5student3" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="Wave16" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5sheep15" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="Wave17" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5sheep16" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5sheep17" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 3.0
+time_before_start = 5.0
+
+[node name="5sheep19" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5student4" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5sheep18" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5student5" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5sheep20" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5student6" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5sheep21" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5elder2" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 3.0
+
+[node name="Wave18" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 3.0
+
+[node name="Wave19" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 3.0
+
+[node name="Wave20" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 3.0
+
+[node name="5student7" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5elder3" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 3.0
+
+[node name="Wave21" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 3.0
+
+[node name="Wave22" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 3.0
+
+[node name="Wave23" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 3.0
+
+[node name="5sheep22" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 3.0
+time_before_start = 3.0
+
+[node name="5student8" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ) ]
+time_between_enemies = 2.0
+time_before_start = 5.0
+
+[node name="5sheep23" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5wap" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5student9" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5sheep24" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5elder4" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 5.0
+
+[node name="5elder5" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5student10" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5elder6" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5elder7" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5wap2" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5elder8" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5elder9" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5student11" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5elder10" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5elder11" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5elder12" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 5.0
+
+[node name="5elder13" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5student12" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5elder14" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5elder15" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5wap3" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5sheep25" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5elder16" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5elder17" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5student13" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5sheep26" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 3 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5elder18" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5elder19" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5student14" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ) ]
+time_between_enemies = 2.0
+time_before_start = 5.0
+
+[node name="5wap4" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5student15" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5wap5" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5student16" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5wap6" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ) ]
+time_between_enemies = 2.0
+time_before_start = 5.0
+
+[node name="5wap7" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5wap8" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5wap9" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5wap10" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ) ]
+time_between_enemies = 2.0
+time_before_start = 2.0
+
+[node name="5wap11" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ) ]
+time_between_enemies = 2.0
+time_before_start = 5.0
+
+[node name="5elder20" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder21" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder22" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder23" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder24" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder25" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder26" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder27" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder28" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder29" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder30" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder31" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder32" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder33" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder34" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder35" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder36" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder37" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder38" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder39" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder40" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder41" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder42" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder43" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder44" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder45" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder46" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder47" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder48" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder49" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder50" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder51" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder52" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder53" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder54" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder55" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder56" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder57" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder58" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder59" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder60" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder61" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder62" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder63" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder64" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 5.0
+
+[node name="5elder65" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder66" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder67" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder68" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder69" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder70" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder71" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder72" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder73" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder74" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder75" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder76" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder77" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder78" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder79" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder80" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder81" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder82" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder83" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder84" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder85" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder86" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder87" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5elder88" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5wap12" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5wap13" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5wap14" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5wap15" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5wap16" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5wap17" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5wap18" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="5wap19" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ) ]
+time_between_enemies = 0.5
+time_before_start = 0.5
+
+[node name="1hazmat" parent="Waves" instance=ExtResource( 11 )]
+enemies = [ ExtResource( 20 ) ]
+time_between_enemies = 1.0
+time_before_start = 15.0
 
 [node name="BackGround" type="TextureRect" parent="."]
 anchor_right = 1.0
@@ -888,7 +1729,7 @@ script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-enemy_names = [ "oudje", "sheep", "wappie", "student", "hazmat", "ggd", "doctor" ]
+enemy_names = [ "wappie", "hazmat" ]
 
 [node name="FinishedLabel" type="Label" parent="CanvasLayer/NewEnemy"]
 margin_top = 12.0467

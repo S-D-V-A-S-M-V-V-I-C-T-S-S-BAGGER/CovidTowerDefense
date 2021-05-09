@@ -1398,7 +1398,7 @@ script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-enemy_names = [ "oudje", "sheep", "wappie", "student", "hazmat", "ggd", "doctor" ]
+enemy_names = [ "oudje", "sheep", "student" ]
 
 [node name="FinishedLabel" type="Label" parent="CanvasLayer/NewEnemy"]
 margin_top = 12.0467
