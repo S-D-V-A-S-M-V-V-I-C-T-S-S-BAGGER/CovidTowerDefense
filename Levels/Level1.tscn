@@ -1064,25 +1064,6 @@ position = Vector2( 367.235, 432 )
 [node name="PathPosition" parent="CanvasLayer/HUD/TowerPositions/TowerPlacer125" index="2"]
 position = Vector2( -32, 0 )
 
-[node name="VBoxContainer" parent="CanvasLayer/HUD/SideBar/TowerPreview" index="0"]
-margin_left = 0.0
-margin_right = 128.0
-margin_bottom = 144.0
-
-[node name="CenterContainer" parent="CanvasLayer/HUD/SideBar/TowerPreview/VBoxContainer" index="0"]
-margin_right = 128.0
-
-[node name="TextureRect" parent="CanvasLayer/HUD/SideBar/TowerPreview/VBoxContainer/CenterContainer" index="0"]
-margin_left = 48.0
-margin_right = 80.0
-
-[node name="TowerName" parent="CanvasLayer/HUD/SideBar/TowerPreview/VBoxContainer" index="1"]
-margin_right = 128.0
-
-[node name="TowerDescription" parent="CanvasLayer/HUD/SideBar/TowerPreview/VBoxContainer" index="2"]
-margin_right = 128.0
-margin_bottom = 144.0
-
 [node name="EndScreen" type="ColorRect" parent="CanvasLayer"]
 visible = false
 anchor_right = 1.0
