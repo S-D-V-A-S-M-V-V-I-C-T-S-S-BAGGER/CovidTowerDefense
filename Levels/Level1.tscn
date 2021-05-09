@@ -99,6 +99,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+starting_money = 0
 
 [node name="Waves" type="Node" parent="."]
 

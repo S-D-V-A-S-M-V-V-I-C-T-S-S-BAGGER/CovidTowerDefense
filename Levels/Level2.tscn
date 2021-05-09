@@ -101,6 +101,9 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+starting_money = 10
+money_per_topup = 10
+time_between_topups = 10.0
 
 [node name="Waves" type="Node" parent="."]
 
