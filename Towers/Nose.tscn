@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Towers/BatTower.gd" type="Script" id=1]
+[ext_resource path="res://Towers/Nose.gd" type="Script" id=1]
 [ext_resource path="res://PlaceHolders/BatsPlaceholder.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/grot.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/jodenneus.png" type="Texture" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -55,23 +55,22 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 16, 16 )
 
-[node name="BatTower" type="Node2D"]
+[node name="Nose" type="Node2D"]
 script = ExtResource( 1 )
-time_between_bats = 7.0
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -1.43527, -0.0956873 )
+position = Vector2( 0.06642, -0.0956873 )
 scale = Vector2( 0.583775, 0.583775 )
 texture = ExtResource( 3 )
 
-[node name="Bat" type="Area2D" parent="."]
+[node name="Snot" type="Area2D" parent="."]
 position = Vector2( 0, 32 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Bat"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Snot"]
 frames = SubResource( 5 )
 animation = "zero"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bat"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Snot"]
 shape = SubResource( 6 )
 
-[connection signal="area_entered" from="Bat" to="." method="_on_Bat_area_entered"]
+[connection signal="area_entered" from="Snot" to="." method="_on_Bat_area_entered"]
