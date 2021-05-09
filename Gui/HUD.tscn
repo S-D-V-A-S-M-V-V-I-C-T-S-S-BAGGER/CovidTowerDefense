@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Gui/TowerOptions.gd" type="Script" id=1]
 [ext_resource path="res://Gui/TowerPositions.gd" type="Script" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://Sprites/lidl.png" type="Texture" id=18]
 [ext_resource path="res://Sprites/nertsboerderij.png" type="Texture" id=19]
 [ext_resource path="res://Sprites/router.png" type="Texture" id=20]
+[ext_resource path="res://Towers/InternetTower.tscn" type="PackedScene" id=21]
 
 [sub_resource type="DynamicFont" id=1]
 size = 18
@@ -182,6 +183,7 @@ cell_tower = ExtResource( 5 )
 fastfood_tower = ExtResource( 9 )
 lidl_tower = ExtResource( 7 )
 nerts_tower = ExtResource( 8 )
+internet_tower = ExtResource( 21 )
 
 [node name="BatTower" type="Button" parent="SideBar/TowerOptions"]
 margin_top = 29.0
@@ -196,7 +198,7 @@ __meta__ = {
 margin_top = 53.0
 margin_right = 128.0
 margin_bottom = 73.0
-text = "Slow"
+text = "Donald J. Trump"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -229,6 +231,7 @@ text = "Nertsen"
 margin_top = 173.0
 margin_right = 128.0
 margin_bottom = 193.0
+text = "Router"
 
 [node name="TowerPreview" type="AspectRatioContainer" parent="SideBar"]
 margin_top = 378.0
