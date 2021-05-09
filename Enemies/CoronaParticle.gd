@@ -21,5 +21,5 @@ func _ready() -> void:
 
 
 func _on_Collider_area_entered(area: Area2D) -> void:
-	var enemy : Enemy = area.owner
+	var enemy = area.owner
 	enemy.add_effect(CoronaEffect.new(enemy, duration, dps, infectiousness))
