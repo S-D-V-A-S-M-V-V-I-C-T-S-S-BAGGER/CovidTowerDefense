@@ -49,6 +49,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Effect/SlowEffect.gd"
 }, {
+"base": "Enemy",
+"class": "Student",
+"language": "GDScript",
+"path": "res://Enemies/Student.gd"
+}, {
 "base": "Effect",
 "class": "VaccineEffect",
 "language": "GDScript",
@@ -78,6 +83,7 @@ _global_script_class_icons={
 "Level": "",
 "ShieldEffect": "",
 "SlowEffect": "",
+"Student": "",
 "VaccineEffect": "",
 "VaccineEnemy": "",
 "Wave": "",
