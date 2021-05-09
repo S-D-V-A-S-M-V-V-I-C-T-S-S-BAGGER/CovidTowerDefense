@@ -36,7 +36,6 @@ func _on_VideoPlayer_finished():
 	# Show the picture of this same enemy.
 	var enemy_name = self.enemy_names[current_index]
 	var texture = load("res://videos/Enemies/" + enemy_name + ".png")
-	texture.resize(100, 100)
 	$TextureRect.texture = texture
 	$TextureRect.visible = true
 

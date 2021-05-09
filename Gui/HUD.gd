@@ -1,4 +1,5 @@
 extends MarginContainer
+class_name Hud
 
 
 # Declare member variables here. Examples:
@@ -15,6 +16,7 @@ var enemy_parent : Node
 
 var level : Level
 var score_label : Label
+var money_label : Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -24,6 +26,7 @@ func _ready() -> void:
 	enemy_parent = get_node(enemy_parent_path)
 	score_label = $SideBar/Score/HBox/ScoreValueLabel
 	level = owner
+	money_label = $SideBar/Bank/Text/MoneyLabel
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -39,3 +42,6 @@ func _process(delta: float) -> void:
 	if level:
 		var score = level.calculate_score()
 		score_label.text = str(score)
+		
+		var money = level.money
+		money_label.text = str(money)

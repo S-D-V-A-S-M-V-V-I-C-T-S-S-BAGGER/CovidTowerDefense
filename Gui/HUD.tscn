@@ -1,8 +1,7 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Gui/TowerOptions.gd" type="Script" id=1]
 [ext_resource path="res://Gui/TowerPositions.gd" type="Script" id=2]
-[ext_resource path="res://Gui/Bank.gd" type="Script" id=3]
 [ext_resource path="res://Towers/BatTower.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Towers/CellTower.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Towers/Tower.tscn" type="PackedScene" id=6]
@@ -67,7 +66,6 @@ custom_constants/margin_right = 10
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
 custom_constants/margin_bottom = 10
-script = ExtResource( 3 )
 
 [node name="Text" type="HBoxContainer" parent="SideBar/Bank"]
 margin_left = 10.0
@@ -257,7 +255,7 @@ nerts_tower_description = "Occasionally spawns (1) mink that will go around infe
 
 [node name="VBoxContainer" type="VBoxContainer" parent="SideBar/TowerPreview"]
 margin_right = 128.0
-margin_bottom = 222.0
+margin_bottom = 144.0
 size_flags_vertical = 3
 
 [node name="CenterContainer" type="CenterContainer" parent="SideBar/TowerPreview/VBoxContainer"]
@@ -282,7 +280,7 @@ clip_text = true
 [node name="TowerDescription" type="Label" parent="SideBar/TowerPreview/VBoxContainer"]
 margin_top = 63.0
 margin_right = 128.0
-margin_bottom = 222.0
+margin_bottom = 144.0
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
 text = "a short description of how this tower works"
