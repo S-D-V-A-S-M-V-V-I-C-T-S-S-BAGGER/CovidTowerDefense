@@ -48,5 +48,5 @@ frames = SubResource( 2 )
 frame = 1
 playing = true
 
-[node name="CoughPlayer" type="AudioStreamPlayer" parent="."]
+[node name="CoughPlayer" type="AudioStreamPlayer2D" parent="."]
 script = ExtResource( 7 )
