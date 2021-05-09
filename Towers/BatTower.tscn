@@ -3,47 +3,39 @@
 [ext_resource path="res://Towers/BatTower.gd" type="Script" id=1]
 [ext_resource path="res://PlaceHolders/BatsPlaceholder.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/grot.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/vleermuis.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/drie_vleermuizen.png" type="Texture" id=5]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 32, 32 )
+region = Rect2( 32, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 64, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=3]
-flags = 4
-atlas = ExtResource( 2 )
 region = Rect2( 96, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=4]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 32, 0, 32, 32 )
-
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ SubResource( 1 ) ],
+"frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "one",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 2 ) ],
+"frames": [ SubResource( 1 ) ],
 "loop": true,
-"name": "three",
+"name": "two",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 3 ) ],
+"frames": [ SubResource( 2 ) ],
 "loop": true,
 "name": "many",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 4 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": true,
-"name": "two",
+"name": "three",
 "speed": 5.0
 }, {
 "frames": [  ],
@@ -52,7 +44,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 16, 16 )
 
 [node name="BatTower" type="Node2D"]
@@ -66,13 +58,12 @@ texture = ExtResource( 3 )
 
 [node name="Bat" type="Area2D" parent="."]
 position = Vector2( 0, 32 )
-collision_layer = 2
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Bat"]
-frames = SubResource( 5 )
+frames = SubResource( 4 )
 animation = "zero"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bat"]
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [connection signal="area_entered" from="Bat" to="." method="_on_Bat_area_entered"]

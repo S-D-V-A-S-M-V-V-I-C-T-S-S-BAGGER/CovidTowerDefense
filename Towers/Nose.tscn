@@ -99,8 +99,10 @@ shape = SubResource( 16 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
 position = Vector2( -1, 10 )
+emitting = false
 amount = 32
 lifetime = 2.0
+one_shot = true
 explosiveness = 0.87
 local_coords = false
 process_material = SubResource( 10 )
