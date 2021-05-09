@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Enemies/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Enemies/Student.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/student/hackerman_1.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/student/hackerman_2.png" type="Texture" id=3]
 [ext_resource path="res://PlaceHolders/schaap_death_1.png" type="Texture" id=4]
@@ -26,8 +26,6 @@ animations = [ {
 
 [node name="Student" type="Node2D"]
 script = ExtResource( 1 )
-base_health = 5.0
-base_speed = 250.0
 
 [node name="Path" type="Path2D" parent="."]
 curve = null
@@ -48,5 +46,5 @@ frames = SubResource( 2 )
 frame = 1
 playing = true
 
-[node name="CoughPlayer" type="AudioStreamPlayer2D" parent="."]
+[node name="CoughPlayer" type="AudioStreamPlayer" parent="."]
 script = ExtResource( 7 )

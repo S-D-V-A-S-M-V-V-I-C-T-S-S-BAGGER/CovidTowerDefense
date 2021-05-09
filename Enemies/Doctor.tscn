@@ -59,7 +59,7 @@ frames = SubResource( 3 )
 frame = 1
 playing = true
 
-[node name="CoughPlayer" type="AudioStreamPlayer2D" parent="."]
+[node name="CoughPlayer" type="AudioStreamPlayer" parent="."]
 script = ExtResource( 7 )
 
 [connection signal="area_entered" from="Path/MovingPoint/Healing" to="." method="_on_Healing_area_entered"]
