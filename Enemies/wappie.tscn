@@ -27,6 +27,7 @@ animations = [ {
 [node name="wappie" type="Node2D"]
 script = ExtResource( 1 )
 base_health = 15.0
+base_speed = 250.0
 
 [node name="Path" type="Path2D" parent="."]
 curve = null
@@ -44,7 +45,6 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Path/MovingPoint"]
 position = Vector2( 0.0853119, -0.0853195 )
 frames = SubResource( 2 )
-frame = 1
 playing = true
 
 [node name="CoughPlayer" type="AudioStreamPlayer2D" parent="."]

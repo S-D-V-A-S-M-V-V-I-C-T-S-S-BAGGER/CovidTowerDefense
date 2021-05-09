@@ -30,6 +30,7 @@ animations = [ {
 [node name="Doctor" type="Node2D"]
 script = ExtResource( 1 )
 base_health = 80.0
+base_immunity = 0.8
 
 [node name="Path" type="Path2D" parent="."]
 curve = null

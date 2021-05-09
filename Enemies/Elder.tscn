@@ -27,6 +27,7 @@ animations = [ {
 [node name="Elder" type="Node2D"]
 script = ExtResource( 1 )
 base_health = 2.0
+base_immunity = 0.2
 base_speed = 200.0
 
 [node name="Path" type="Path2D" parent="."]
@@ -45,7 +46,6 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Path/MovingPoint"]
 position = Vector2( 0.0853119, -0.0853195 )
 frames = SubResource( 2 )
-frame = 1
 playing = true
 
 [node name="CoughPlayer" type="AudioStreamPlayer2D" parent="."]

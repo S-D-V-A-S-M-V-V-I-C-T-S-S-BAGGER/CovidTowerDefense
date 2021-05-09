@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Sprites/MilasianCircaBoldPERSONAL.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Sprites/Trueno-wml2.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://Menus/MainMenu/MainMenu.gd" type="Script" id=3]
 [ext_resource path="res://Levels/Level1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Levels/Level2.tscn" type="PackedScene" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 104
@@ -24,6 +25,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 level1_scene = ExtResource( 4 )
+level2_scene = ExtResource( 5 )
 
 [node name="Margin" type="MarginContainer" parent="."]
 anchor_right = 1.0
@@ -65,6 +67,13 @@ margin_bottom = 332.0
 margin_right = 784.0
 margin_bottom = 39.0
 custom_fonts/font = SubResource( 2 )
-text = "Level1"
+text = "Level 1"
+
+[node name="Level2Button" type="Button" parent="Margin/VBox/Margin/VBox"]
+margin_top = 43.0
+margin_right = 784.0
+margin_bottom = 63.0
+text = "Level 2"
 
 [connection signal="pressed" from="Margin/VBox/Margin/VBox/Level1Button" to="." method="_on_Level1Button_pressed"]
+[connection signal="pressed" from="Margin/VBox/Margin/VBox/Level2Button" to="." method="_on_Level2Button_pressed"]
