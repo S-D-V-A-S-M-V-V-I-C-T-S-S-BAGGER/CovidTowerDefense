@@ -47,6 +47,10 @@ func is_expired() -> bool:
 # ##
 # To be implemented by children:
 
+func name() -> String:
+	push_error("Effect has not implemented name function")
+	return ""
+
 func tick(delta: float):
 	pass
 

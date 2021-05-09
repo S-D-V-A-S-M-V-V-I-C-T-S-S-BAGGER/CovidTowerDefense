@@ -9,6 +9,10 @@ func _init(enemy: Enemy, duration: float, damage_multiplier: float).(enemy, dura
 	self.damage_multiplier = damage_multiplier
 
 
+func name() -> String:
+	return "WeaknessEffect"
+
+
 func tick(delta: float):
 	self.enemy.immunity *= 0.5
 

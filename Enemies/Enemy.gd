@@ -16,6 +16,7 @@ export(float) var base_speed = 300.0
 var immunity = 1.0
 var health: float
 var speed = 1.0
+var random = RandomNumberGenerator.new()
 
 var effects = []
 var shield = null
@@ -49,11 +50,11 @@ func _process(delta: float) -> void:
 	elif health <= 0:
 		die()
 		return
-	
+
 	# Then initialize the base case
-	immunity = 1.0
+	immunity = base_immunity
 	speed = 1.0
-	
+
 	# Process all effects
 	var expired = []
 	for effect in effects:
@@ -78,6 +79,12 @@ func _process(delta: float) -> void:
 		die()
 		return
 	
+	# Randomly decide to maybe play a coughing sound if infected
+	if self.is_infected():
+		random.randomize()
+		if random.randi_range(0, 50) < 1:
+			$CoughPlayer.play_random_sound()
+
 	# Otherwise, continue
 	var cur_speed = base_speed * speed;
 	var movement: PathFollow2D = get_node("Path/MovingPoint")
@@ -143,8 +150,12 @@ func add_effect(effect):
 		return
 	
 	# Save a reference to the shield effect for later use
-	if effect.get_class() == "ShieldEffect":
+	if effect.name() == "ShieldEffect":
 		shield = effect
+	
+	# Apply immunity in covid application
+	if effect.name() == "CoronaEffect" && randf() > immunity:
+		return
 	
 	if effect.is_priority():
 		effects.insert(0, effect)
@@ -167,10 +178,32 @@ func get_max_health() -> float:
 
 func is_infected() -> bool:
 	for e in effects:
-		if e.get_class() == "CoronaEffect":
+		if e.name() == "CoronaEffect":
 			return true
 	
 	return false
+
+
+func destroy_shield() -> void:
+	var res = null
+	for e in effects:
+		if e.name() == "ShieldEffect":
+			res = e
+			break
+	
+	if res != null:
+		effects.erase(res)
+
+
+func remove_vaccin() -> void:
+	var res = null
+	for e in effects:
+		if e.name() == "VaccineEffect":
+			res = e
+			break
+	
+	if res != null:
+		effects.erase(res)
 
 
 # ##
