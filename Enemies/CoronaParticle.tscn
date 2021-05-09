@@ -46,11 +46,9 @@ collision_layer = 8
 shape = SubResource( 1 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
-emitting = false
 amount = 16
-one_shot = true
-explosiveness = 0.8
-randomness = 0.5
+explosiveness = 0.6
+randomness = 0.2
 local_coords = false
 process_material = SubResource( 6 )
 texture = ExtResource( 1 )
