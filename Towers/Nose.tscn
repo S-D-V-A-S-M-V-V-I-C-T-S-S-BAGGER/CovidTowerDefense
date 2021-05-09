@@ -5,7 +5,7 @@
 [ext_resource path="res://Sprites/jodenneus.png" type="Texture" id=3]
 [ext_resource path="res://PlaceHolders/Snot.png" type="Texture" id=4]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=5]
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
@@ -18,16 +18,16 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )
 
-[sub_resource type="Curve" id=3]
+[sub_resource type="Curve" id=2]
 _data = [ Vector2( 0, 0.528409 ), 0.0, 0.0, 0, 0, Vector2( 0.0263158, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.776316, 0.986364 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), -2.60661, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=4]
-curve = SubResource( 3 )
+[sub_resource type="CurveTexture" id=3]
+curve = SubResource( 2 )
 
-[sub_resource type="ParticlesMaterial" id=5]
+[sub_resource type="ParticlesMaterial" id=4]
 lifetime_randomness = 0.28
 emission_shape = 2
 emission_box_extents = Vector3( 5, 0, 0 )
@@ -41,7 +41,7 @@ orbit_velocity_random = 0.0
 damping = 1600.0
 angle = 360.0
 angle_random = 1.0
-scale_curve = SubResource( 4 )
+scale_curve = SubResource( 3 )
 
 [node name="Nose" type="Node2D"]
 script = ExtResource( 1 )
@@ -56,11 +56,11 @@ position = Vector2( 0, 32 )
 collision_layer = 2
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Snot"]
-frames = SubResource( 1 )
+frames = SubResource( 5 )
 animation = "zero"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Snot"]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
 position = Vector2( -1, 10 )
@@ -70,7 +70,7 @@ lifetime = 2.0
 one_shot = true
 explosiveness = 0.87
 local_coords = false
-process_material = SubResource( 5 )
+process_material = SubResource( 4 )
 texture = ExtResource( 4 )
 
 [connection signal="area_entered" from="Snot" to="." method="_on_Snot_area_entered"]
