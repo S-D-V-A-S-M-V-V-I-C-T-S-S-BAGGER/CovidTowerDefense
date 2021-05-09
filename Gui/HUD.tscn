@@ -34,7 +34,9 @@ use_filter = true
 font_data = ExtResource( 13 )
 
 [node name="HUD" type="MarginContainer"]
-anchor_right = 1.0
+pause_mode = 2
+anchor_left = 0.000746995
+anchor_right = 1.00075
 anchor_bottom = 1.0
 custom_constants/margin_right = 896
 script = ExtResource( 11 )
@@ -63,9 +65,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Bank" type="MarginContainer" parent="SideBar"]
+[node name="Pause" type="Button" parent="SideBar"]
 margin_right = 128.0
-margin_bottom = 34.0
+margin_bottom = 20.0
+text = "Pause"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bank" type="MarginContainer" parent="SideBar"]
+margin_top = 24.0
+margin_right = 128.0
+margin_bottom = 58.0
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
@@ -89,9 +100,9 @@ margin_bottom = 14.0
 text = "0"
 
 [node name="SpawnTimer" type="MarginContainer" parent="SideBar"]
-margin_top = 38.0
+margin_top = 62.0
 margin_right = 128.0
-margin_bottom = 72.0
+margin_bottom = 96.0
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
@@ -115,9 +126,9 @@ margin_bottom = 14.0
 text = "0.0"
 
 [node name="EnemyCounter" type="MarginContainer" parent="SideBar"]
-margin_top = 76.0
+margin_top = 100.0
 margin_right = 128.0
-margin_bottom = 110.0
+margin_bottom = 134.0
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
@@ -141,9 +152,9 @@ margin_bottom = 14.0
 text = "0"
 
 [node name="Score" type="MarginContainer" parent="SideBar"]
-margin_top = 114.0
+margin_top = 138.0
 margin_right = 128.0
-margin_bottom = 148.0
+margin_bottom = 172.0
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
@@ -167,9 +178,9 @@ margin_bottom = 14.0
 text = "0"
 
 [node name="TowerOptions" type="VBoxContainer" parent="SideBar"]
-margin_top = 152.0
+margin_top = 176.0
 margin_right = 128.0
-margin_bottom = 374.0
+margin_bottom = 386.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
@@ -187,61 +198,61 @@ internet_tower = ExtResource( 21 )
 nose_tower = ExtResource( 23 )
 
 [node name="BatTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 17.0
+margin_top = 11.0
 margin_right = 128.0
-margin_bottom = 37.0
+margin_bottom = 31.0
 text = "Bat"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Trump" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 41.0
+margin_top = 35.0
 margin_right = 128.0
-margin_bottom = 61.0
+margin_bottom = 55.0
 text = "Donald J. Trump"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CellTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 65.0
+margin_top = 59.0
 margin_right = 128.0
-margin_bottom = 85.0
+margin_bottom = 79.0
 text = "5G"
 
 [node name="FastfoodTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 89.0
+margin_top = 83.0
 margin_right = 128.0
-margin_bottom = 109.0
+margin_bottom = 103.0
 text = "Fast-food"
 
 [node name="LidlTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 113.0
+margin_top = 107.0
 margin_right = 128.0
-margin_bottom = 133.0
+margin_bottom = 127.0
 text = "Lidl"
 
 [node name="NertsTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 137.0
+margin_top = 131.0
 margin_right = 128.0
-margin_bottom = 157.0
+margin_bottom = 151.0
 text = "Nertsen"
 
 [node name="InternetTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 161.0
+margin_top = 155.0
 margin_right = 128.0
-margin_bottom = 181.0
+margin_bottom = 175.0
 text = "Router"
 
 [node name="Nose" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 185.0
+margin_top = 179.0
 margin_right = 128.0
-margin_bottom = 205.0
+margin_bottom = 199.0
 text = "Nose"
 
 [node name="TowerPreview" type="AspectRatioContainer" parent="SideBar"]
-margin_top = 378.0
+margin_top = 390.0
 margin_right = 128.0
 margin_bottom = 600.0
 size_flags_vertical = 3
@@ -312,6 +323,7 @@ custom_fonts/font = SubResource( 2 )
 text = "a short description of how this tower works"
 autowrap = true
 
+[connection signal="pressed" from="SideBar/Pause" to="." method="_on_Pause_pressed"]
 [connection signal="mouse_entered" from="SideBar/TowerOptions/BatTower" to="SideBar/TowerPreview" method="_on_BatTower_mouse_entered"]
 [connection signal="pressed" from="SideBar/TowerOptions/BatTower" to="SideBar/TowerOptions" method="_on_BatTower_pressed"]
 [connection signal="mouse_entered" from="SideBar/TowerOptions/Trump" to="SideBar/TowerPreview" method="_on_SlowTower_mouse_entered"]

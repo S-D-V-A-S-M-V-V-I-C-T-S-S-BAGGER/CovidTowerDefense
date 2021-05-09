@@ -45,3 +45,13 @@ func _process(delta: float) -> void:
 		
 		var money = level.money
 		money_label.text = str(money)
+
+
+func _on_Pause_pressed():
+	var is_paused = get_tree().paused
+	get_tree().paused = not is_paused
+	
+	if is_paused:
+		$SideBar/Pause.text = "Pause"
+	else:
+		$SideBar/Pause.text = "Continue"
