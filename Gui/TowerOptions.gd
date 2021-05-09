@@ -17,6 +17,8 @@ export (int) var internet_tower_cost = 10
 export (PackedScene) var nose_tower
 export (int) var nose_tower_cost = 10
 
+export (NodePath) var nerts_path
+
 var hud : Hud
 
 # Called when the node enters the scene tree for the first time.
@@ -28,7 +30,7 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func place_tower(tower_scene:PackedScene, cost:int) -> void:
+func place_tower(tower_scene:PackedScene, cost:int, path = null) -> void:
 	var bank = hud.level
 	var position_selector = hud.get_node("TowerPositions")
 	
@@ -38,8 +40,11 @@ func place_tower(tower_scene:PackedScene, cost:int) -> void:
 		var tower = tower_scene.instance()
 		var tower_position = selected_position.position
 		var path_position = selected_position.get_node("PathPosition").position
-		tower.initialize(tower_position, path_position)
 		owner.owner.add_child(tower)
+		if path:
+			tower.initialize(tower_position, path_position, path)
+		else:
+			tower.initialize(tower_position, path_position)
 		selected_position.disable()
 
 
@@ -64,7 +69,8 @@ func _on_LidlTower_pressed():
 
 
 func _on_NertsTower_pressed():
-	place_tower(nerts_tower, nerts_tower_cost)
+	var path = get_node(nerts_path)
+	place_tower(nerts_tower, nerts_tower_cost, path)
 
 
 func _on_InternetTower_pressed():
