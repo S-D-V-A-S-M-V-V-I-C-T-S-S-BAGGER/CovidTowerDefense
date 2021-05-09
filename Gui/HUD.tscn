@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Gui/TowerOptions.gd" type="Script" id=1]
 [ext_resource path="res://Gui/TowerPositions.gd" type="Script" id=2]
@@ -21,6 +21,8 @@
 [ext_resource path="res://Sprites/nertsboerderij.png" type="Texture" id=19]
 [ext_resource path="res://Sprites/router.png" type="Texture" id=20]
 [ext_resource path="res://Towers/InternetTower.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Sprites/jodenneus.png" type="Texture" id=22]
+[ext_resource path="res://Towers/Nose.tscn" type="PackedScene" id=23]
 
 [sub_resource type="DynamicFont" id=1]
 size = 18
@@ -184,54 +186,61 @@ fastfood_tower = ExtResource( 9 )
 lidl_tower = ExtResource( 7 )
 nerts_tower = ExtResource( 8 )
 internet_tower = ExtResource( 21 )
+nose_tower = ExtResource( 23 )
 
 [node name="BatTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 29.0
+margin_top = 17.0
 margin_right = 128.0
-margin_bottom = 49.0
+margin_bottom = 37.0
 text = "Bat"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Trump" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 53.0
+margin_top = 41.0
 margin_right = 128.0
-margin_bottom = 73.0
+margin_bottom = 61.0
 text = "Donald J. Trump"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CellTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 77.0
+margin_top = 65.0
 margin_right = 128.0
-margin_bottom = 97.0
+margin_bottom = 85.0
 text = "5G"
 
 [node name="FastfoodTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 101.0
+margin_top = 89.0
 margin_right = 128.0
-margin_bottom = 121.0
+margin_bottom = 109.0
 text = "Fast-food"
 
 [node name="LidlTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 125.0
+margin_top = 113.0
 margin_right = 128.0
-margin_bottom = 145.0
+margin_bottom = 133.0
 text = "Lidl"
 
 [node name="NertsTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 149.0
+margin_top = 137.0
 margin_right = 128.0
-margin_bottom = 169.0
+margin_bottom = 157.0
 text = "Nertsen"
 
 [node name="InternetTower" type="Button" parent="SideBar/TowerOptions"]
-margin_top = 173.0
+margin_top = 161.0
 margin_right = 128.0
-margin_bottom = 193.0
+margin_bottom = 181.0
 text = "Router"
+
+[node name="Nose" type="Button" parent="SideBar/TowerOptions"]
+margin_top = 185.0
+margin_right = 128.0
+margin_bottom = 205.0
+text = "Nose"
 
 [node name="TowerPreview" type="AspectRatioContainer" parent="SideBar"]
 margin_top = 378.0
@@ -268,6 +277,9 @@ nerts_tower_description = "Occasionally spawns (1) mink that will go around infe
 internet_tower_texture = ExtResource( 20 )
 internet_tower_name = "Router"
 internet_tower_description = "Spreads actual news to prevent enemies from wearing masks and scarfs."
+nose_tower_texture = ExtResource( 22 )
+nose_tower_name = "Nose"
+nose_tower_description = "Spreads COVID on the floor, infecting and slowing enemies"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="SideBar/TowerPreview"]
 margin_right = 128.0
@@ -315,3 +327,5 @@ autowrap = true
 [connection signal="mouse_entered" from="SideBar/TowerOptions/NertsTower" to="SideBar/TowerPreview" method="_on_NertsTower_mouse_entered"]
 [connection signal="pressed" from="SideBar/TowerOptions/NertsTower" to="SideBar/TowerOptions" method="_on_NertsTower_pressed"]
 [connection signal="pressed" from="SideBar/TowerOptions/InternetTower" to="SideBar/TowerOptions" method="_on_InternetTower_pressed"]
+[connection signal="mouse_entered" from="SideBar/TowerOptions/Nose" to="SideBar/TowerPreview" method="_on_Nose_mouse_entered"]
+[connection signal="pressed" from="SideBar/TowerOptions/Nose" to="SideBar/TowerOptions" method="_on_Nose_pressed"]
