@@ -17,13 +17,11 @@ export (int) var internet_tower_cost = 10
 export (PackedScene) var nose_tower
 export (int) var nose_tower_cost = 10
 
-var bank : Node
-var position_selector : Node 
+var hud : Hud
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	bank = owner.get_node("SideBar/Bank")
-	position_selector = owner.get_node("TowerPositions")
+	hud = owner
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -31,6 +29,9 @@ func _ready():
 #	pass
 
 func place_tower(tower_scene:PackedScene, cost:int) -> void:
+	var bank = hud.level
+	var position_selector = hud.get_node("TowerPositions")
+	
 	var selected_position = position_selector.active_position
 	if selected_position and bank.pay(cost):
 		position_selector.deselect_position()

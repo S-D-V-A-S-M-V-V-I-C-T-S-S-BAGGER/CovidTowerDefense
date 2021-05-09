@@ -1,8 +1,7 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Gui/TowerOptions.gd" type="Script" id=1]
 [ext_resource path="res://Gui/TowerPositions.gd" type="Script" id=2]
-[ext_resource path="res://Gui/Bank.gd" type="Script" id=3]
 [ext_resource path="res://Towers/BatTower.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Towers/CellTower.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Towers/TrumpTower.tscn" type="PackedScene" id=6]
@@ -71,7 +70,6 @@ custom_constants/margin_right = 10
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
 custom_constants/margin_bottom = 10
-script = ExtResource( 3 )
 
 [node name="Text" type="HBoxContainer" parent="SideBar/Bank"]
 margin_left = 10.0
