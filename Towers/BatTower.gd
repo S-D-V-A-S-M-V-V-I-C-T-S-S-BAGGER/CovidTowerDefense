@@ -56,4 +56,4 @@ func _on_Bat_area_entered(area: Area2D) -> void:
 		set_bat_animation()
 		
 		var enemy = area.owner
-		enemy.damage(50)
+		enemy.damage(5)
