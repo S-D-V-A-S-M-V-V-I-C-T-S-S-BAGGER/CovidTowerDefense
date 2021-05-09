@@ -41,7 +41,12 @@ func _on_VideoPlayer_finished():
 
 
 func _on_CloseButton_pressed():
-	current_index = 0
-	self.visible = false
-	$VideoPlayer.stop()
-	get_tree().paused = false
+	current_index += 1
+	
+	if current_index >= enemy_names.size():
+	
+		self.visible = false
+		$VideoPlayer.stop()
+		get_tree().paused = false
+	else:
+		show_video(current_index)
