@@ -16,7 +16,7 @@ flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 96, 0, 32, 32 )
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
@@ -44,7 +44,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 16, 16 )
 
 [node name="BatTower" type="Node2D"]
@@ -58,12 +58,13 @@ texture = ExtResource( 3 )
 
 [node name="Bat" type="Area2D" parent="."]
 position = Vector2( 0, 32 )
+collision_layer = 2
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Bat"]
-frames = SubResource( 4 )
+frames = SubResource( 3 )
 animation = "zero"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bat"]
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [connection signal="area_entered" from="Bat" to="." method="_on_Bat_area_entered"]
